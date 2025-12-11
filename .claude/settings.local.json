@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git pull:*)",
+      "Bash(git init:*)",
+      "Bash(git commit:*)",
+      "Bash(node:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
