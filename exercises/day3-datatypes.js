@@ -20,7 +20,10 @@
 // - belumDiisi: undefined (jangan kasih nilai)
 
 // Write your answer here:
-
+const teks = 'JavaScript is fun!'
+const angka = 2024
+let isAktif = true
+let belumDiisi;
 
 // ========================================
 // SOAL 2: Cek Tipe Data
@@ -30,7 +33,10 @@
 // Format: "tipe data teks: [hasil typeof teks]"
 
 // Write your answer here:
-
+console.log('tipe data teks: ' + typeof teks)
+console.log('tipe data teks: ' + typeof angka)
+console.log('tipe data teks: ' + typeof isAktif)
+console.log('tipe data teks: ' + typeof belumDiisi)
 
 // ========================================
 // SOAL 3: Konversi String ke Number
@@ -39,6 +45,14 @@
 // let str1 = "100";
 // let str2 = "3.14";
 // let str3 = "42 adalah jawabannya";
+
+let str1 = "100"
+let str2 =  "3.14"
+let str3 = "42 adalah jawabannya"
+
+let StrNum1 = Number(str1);
+let StrNum2 = Number(str2);
+let StrNum3 = Number(str3);
 
 // Write your conversion and display results:
 console.log("String '100' ke Number:", Number("100"));
@@ -55,7 +69,13 @@ console.log("String '42 adalah jawabannya' ke Number:", Number("42 adalah jawaba
 // let num3 = 0;
 
 // Write your conversion and display results:
+let num1 = 50
+let num2 =  3.14159
+let num3 = 0
 
+let numStr1 = String(num1)
+let numStr2 = String(num2)
+let numStr3 = String(num3)
 
 // ========================================
 // SOAL 5: Truthy dan Falsy
@@ -87,18 +107,24 @@ console.log("Boolean(false):", Boolean(false));
 function celsiusToFahrenheit(celsius) {
     // Formula: (C × 9/5) + 32
     // Write your code here
+    let cToF = (celsius * (9/5)) + 32
+    return cToF;
 }
 
 // Function Kilometer ke Mil
 function kmToMiles(km) {
     // Formula: km × 0.621371
     // Write your code here
+    let kmToMil = km * 0.621371
+    return kmToMil;
 }
 
 // Function Jam ke Menit
 function hoursToMinutes(hours) {
     // Formula: hours × 60
     // Write your code here
+    let hToM = hours * 60
+    return hToM;
 }
 
 // Test fungsi-fungsi di atas

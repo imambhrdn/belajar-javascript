@@ -8,10 +8,10 @@ Panduan lengkap belajar JavaScript dari nol hingga mahir dalam 30 hari dengan pr
 
 ### Day 1: Pengenalan JavaScript
 **Materi:**
-- [ ] Apa itu JavaScript dan kegunaannya
-- [ ] Cara menjalankan JavaScript (browser console, file .js)
-- [ ] `console.log()` - menampilkan output
-- [ ] Komentar (`//` dan `/* */`)
+- [x] Apa itu JavaScript dan kegunaannya
+- [x] Cara menjalankan JavaScript (browser console, file .js)
+- [x] `console.log()` - menampilkan output
+- [x] Komentar (`//` dan `/* */`)
 
 **🔨 Praktik:**
 ```javascript
@@ -27,11 +27,11 @@ console.log("Umur saya [umur] tahun");
 
 ---
 
-### Day 2: Variables
+### Day 2: Variables ✅
 **Materi:**
-- [ ] `var`, `let`, `const` - perbedaannya
-- [ ] Aturan penamaan variabel
-- [ ] Best practice: gunakan `const` dan `let`
+- [x] `var`, `let`, `const` - perbedaannya
+- [x] Aturan penamaan variabel
+- [x] Best practice: gunakan `const` dan `let`
 
 **🔨 Praktik:**
 ```javascript
@@ -53,12 +53,12 @@ console.log(nama, umur, kota);
 
 ---
 
-### Day 3: Data Types
+### Day 3: Data Types ✅
 **Materi:**
-- [ ] String, Number, Boolean
-- [ ] Undefined, Null
-- [ ] `typeof` operator
-- [ ] Type conversion
+- [x] String, Number, Boolean
+- [x] Undefined, Null
+- [x] `typeof` operator
+- [x] Type conversion
 
 **🔨 Praktik:**
 ```javascript
@@ -926,10 +926,15 @@ Buat Todo List lengkap dengan:
 
 | Week | Topics | Status |
 |------|--------|--------|
-| 1 | Fundamentals | ⬜ |
+| 1 | Fundamentals | 🟩 3/7 days completed |
 | 2 | Control Flow & Functions | ⬜ |
 | 3 | Arrays & Objects | ⬜ |
 | 4 | DOM & Async | ⬜ |
+
+### 📋 Completed Days:
+- ✅ **Day 1**: Pengenalan JavaScript
+- ✅ **Day 2**: Variables (Score: 100%)
+- ✅ **Day 3**: Data Types (Score: 100%)
 
 ---
 
