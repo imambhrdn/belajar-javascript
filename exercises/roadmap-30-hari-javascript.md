@@ -83,9 +83,10 @@ console.log(numAngka + 10); // 133
 
 ### Day 4: Operators
 **Materi:**
-- [ ] Aritmatika: `+ - * / % **`
-- [ ] Assignment: `= += -= *= /=`
-- [ ] Comparison: `== === != !== > < >= <=`
+- [x] Aritmatika: `+ - * / % **`
+- [x] Assignment: `= += -= *= /=`
+- [x] Comparison: `== === != !== > < >= <=`
+- [x] Logical: `&& || !`
 
 **🔨 Praktik:**
 ```javascript
@@ -108,39 +109,260 @@ console.log("Luas:", luas);
 let celsius = 30;
 let fahrenheit = (celsius * 9/5) + 32;
 console.log(celsius + "°C = " + fahrenheit + "°F");
+
+// 4. Logical operators
+let isAdult = true;
+let hasLicense = false;
+console.log("Boleh driving:", isAdult && hasLicense); // false
+console.log("Boleh voting:", isAdult || hasLicense); // true
+console.log("Tidak boleh:", !isAdult); // false
+
+// 5. Combination
+let score = 85;
+let attendance = 90;
+console.log("Lulus:", score >= 75 && attendance >= 80);
 ```
 
 ---
 
 ### Day 5: Logical Operators
 **Materi:**
-- [ ] AND (`&&`), OR (`||`), NOT (`!`)
-- [ ] Truthy dan Falsy values
-- [ ] Nullish coalescing (`??`)
+- [x] AND (`&&`) - semua kondisi harus true
+- [x] OR (`||`) - salah satu kondisi true cukup
+- [x] NOT (`!`) - membalik nilai boolean
+- [x] Truthy dan Falsy values
+- [x] Short-circuit evaluation
+- [x] Nullish coalescing (`??`)
 
 **🔨 Praktik:**
 ```javascript
-// 1. Cek kondisi dengan AND/OR
+// 1. Operator AND (&&)
 let umur = 20;
 let punyaKTP = true;
+console.log("Boleh vote:", umur >= 17 && punyaKTP); // true
+console.log("Boleh driving:", umur >= 18 && punyaKTP); // false
 
-console.log("Boleh vote:", umur >= 17 && punyaKTP);
-console.log("Boleh masuk:", umur >= 18 || punyaKTP);
+// 2. Operator OR (||)
+console.log("Boleh masuk bioskop:", umur >= 17 || punyaKTP); // true
 
-// 2. Default value dengan OR
+// 3. Operator NOT (!)
+console.log("Tidak punya KTP:", !punyaKTP); // false
+
+// 4. Truthy dan Falsy Values
+// Falsy: false, 0, "", null, undefined, NaN
+console.log(Boolean(false));    // false
+console.log(Boolean(0));        // false
+console.log(Boolean(""));       // false
+console.log(Boolean(null));     // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(NaN));      // false
+
+// Truthy: semua nilai selain falsy
+console.log(Boolean("hello"));  // true
+console.log(Boolean(42));       // true
+console.log(Boolean([]));       // true
+console.log(Boolean({}));       // true
+
+// 5. Short-circuit Evaluation
+let x = 5;
+// AND - jika pertama false, tidak cek kedua
+console.log(false && x++);      // false
+console.log(x);                 // 5 (tidak bertambah)
+
+// OR - jika pertama true, tidak cek kedua
+console.log(true || x++);       // true
+console.log(x);                 // 5 (tidak bertambah)
+
+// 6. Default value dengan OR
 let username = "" || "Guest";
-console.log("Hello,", username);
+let umurUser = 0 || 25;
+console.log("Username:", username); // "Guest"
+console.log("Umur:", umurUser);     // 25
 
-// 3. Buat sistem cek kelayakan kredit
-// - Umur minimal 21
-// - Punya pekerjaan
-// - Gaji minimal 5 juta
-let umurUser = 25;
-let punyaKerja = true;
-let gaji = 7000000;
-let bisaKredit = umurUser >= 21 && punyaKerja && gaji >= 5000000;
-console.log("Bisa kredit:", bisaKredit);
+// 7. Nullish Coalescing (??) - hanya null/undefined
+let nama = null ?? "Anonymous";    // "Anonymous"
+let pesan = "" ?? "No message";    // "" (karena bukan null/undefined)
+let angka = 0 ?? 100;             // 0 (karena bukan null/undefined)
+
+// 8. Praktik: Sistem validasi
+let email = "user@email.com";
+let password = "123456";
+let isActive = true;
+
+// Validasi login
+let isValidLogin = email.includes("@") && password.length >= 6 && isActive;
+console.log("Login valid:", isValidLogin);
+
+// 9. Praktik: Cek diskon
+let totalBelanja = 250000;
+let isMember = true;
+let punyaKupon = false;
+
+// Diskon 20% jika member + belanja > 200k
+// Diskon 10% jika punya kupon
+let dapatDiskon = (isMember && totalBelanja > 200000) || punyaKupon;
+console.log("Dapat diskon:", dapatDiskon);
+
+// 10. Praktik: Game conditions
+let playerHealth = 50;
+let hasKey = false;
+let doorLocked = true;
+
+// Buka pintu jika punya kunci atau pintu tidak terkunci
+let canOpenDoor = hasKey || !doorLocked;
+console.log("Buka pintu:", canOpenDoor);
+
+// Game over jika health <= 0
+let gameOver = playerHealth <= 0;
+console.log("Game Over:", gameOver);
 ```
+
+**📝 Latihan Mandiri:**
+
+**Latihan 1: Validasi Data Pendaftaran**
+Buat sistem validasi untuk formulir pendaftaran dengan ketentuan:
+- Umur minimal 17 tahun
+- Email harus mengandung "@"
+- Password minimal 8 karakter
+- Username tidak boleh kosong
+
+```javascript
+// Test cases:
+let form1 = {
+    umur: 18,
+    email: "user@email.com",
+    password: "password123",
+    username: "user123"
+};
+// Expected: true
+
+let form2 = {
+    umur: 16,
+    email: "useremail.com",
+    password: "pass",
+    username: ""
+};
+// Expected: false
+
+// Buat function validateForm(data) yang returns true/false
+```
+
+**Latihan 2: Sistem Keamanan Gedung**
+Buat logika keamanan gedung dengan aturan:
+- Tamu bisa masuk jika punya appointment atau ada karyawan yang mendamping
+- Karyawan bisa masuk jika punya ID card dan jam kerja (8-17)
+- Security selalu bisa masuk
+
+```javascript
+// Test cases:
+let visitor = { role: "tamu", hasAppointment: true, hasEscort: false };
+let employee = { role: "karyawan", hasID: true, hour: 10 };
+let security = { role: "security", hasID: false, hour: 23 };
+let nightVisitor = { role: "tamu", hasAppointment: false, hasEscort: false };
+
+// Buat function canEnter(person) yang returns true/false
+```
+
+**Latihan 3: Kalkulator Diskon Kompleks**
+Buat sistem diskon dengan rules:
+- Member: diskon 20% jika belanja > 200k, diskon 10% jika > 100k
+- Non-member: diskon 15% jika belanja > 300k, diskon 5% jika > 150k
+- Extra diskon 5% jika hari weekend DAN belanja > 250k
+- Tidak bisa dapat diskon lebih dari 25%
+
+```javascript
+// Test cases:
+// Member, belanja 250k, weekday = 20%
+// Member, belanja 250k, weekend = 25%
+// Non-member, belanja 350k, weekend = 20%
+// Non-member, belanja 100k, weekday = 0%
+
+// Buat function hitungDiskon(isMember, totalBelanja, isWeekend)
+```
+
+**Latihan 4: Game Battle System**
+Buat sistem battle untuk game:
+- Attack berhasil jika: (accuracy > 50% AND enemy tidak dodge) OR critical hit
+- Critical hit jika: luck > 80%
+- Dodge jika: agility > 70%
+- Damage: baseDamage * 2 jika critical, * 0.5 jika miss
+
+```javascript
+// Test data:
+let player = {
+    accuracy: 75,
+    luck: 60,
+    baseDamage: 100
+};
+let enemy = {
+    agility: 65,
+    isDodging: true
+};
+
+// Buat function calculateAttack(player, enemy)
+```
+
+**Latihan 5: Smart Home System**
+Buat sistem kontrol smart home:
+- AC nyala jika: suhu > 25 OR (sedang berada di rumah AND jam di antara 18-6)
+- Lampu nyala jika: jam di luar 6-18 OR (gerakan terdeteksi AND tidak ada cahaya)
+- Alarm aktif jika: tidak ada orang di rumah AND (jam 22-6 OR detect motion)
+
+```javascript
+// Test scenarios:
+let siang = { hour: 14, atHome: true, temp: 28, motion: false, light: true };
+let malam = { hour: 23, atHome: true, temp: 24, motion: true, light: false };
+let kosong = { hour: 2, atHome: false, temp: 22, motion: true, light: false };
+
+// Buat function checkHomeControls(state)
+// Return object { ac: true/false, lamp: true/false, alarm: true/false }
+```
+
+**Latihan 6: Short-circuit Challenge**
+Manfaatkan short-circuit evaluation untuk menulis kode yang lebih efisien:
+
+```javascript
+// 1. Panggil method hanya jika object ada
+let user = { name: "Budi", greet: () => console.log("Hello!") };
+// Tampilkan "Hello!" hanya jika user ada dan ada method greet
+
+// 2. Assign default value yang kompleks
+// Jika nama kosong, gunakan "User" + random number 1-100
+
+// 3. Validasi array sebelum operasi
+let numbers = [1, 2, 3, 4, 5];
+// Hitung rata-rata hanya jika array tidak kosong
+
+// 4. Chain operation yang aman
+let data = null;
+// Ambil data.user.profile.name jika semua ada, else "Guest"
+```
+
+**Challenge Tambahan: Expression Builder**
+Buat function yang bisa menggabungkan multiple kondisi dengan AND/OR:
+
+```javascript
+function buatKondisi() {
+    let kondisi = [];
+    return {
+        AND: function(value) { kondisi.push({type: 'AND', value}); return this; },
+        OR: function(value) { kondisi.push({type: 'OR', value}); return this; },
+        evaluasi: function() {
+            // Implement logic untuk mengevaluasi semua kondisi
+            // Contoh: AND(true).OR(false).AND(true).evaluasi() -> true
+        }
+    };
+}
+
+// Contoh penggunaan:
+buatKondisi()
+    .AND(umur >= 17)
+    .OR(punyaKTP)
+    .AND(isActive)
+    .evaluasi();
+```
+
+**📝 Status:** ✅ **Selesai pada 12 Desember 2024** (100% - Score: 10/10)
 
 ---
 
@@ -926,10 +1148,17 @@ Buat Todo List lengkap dengan:
 
 | Week | Topics | Status |
 |------|--------|--------|
-| 1 | Fundamentals | ⬜ |
+| 1 | Fundamentals | 🔄 (5/7 days) |
 | 2 | Control Flow & Functions | ⬜ |
 | 3 | Arrays & Objects | ⬜ |
 | 4 | DOM & Async | ⬜ |
+
+**Completed Days:**
+- ✅ Day 1: Pengenalan JavaScript
+- ✅ Day 2: Variables
+- ✅ Day 3: Data Types
+- ✅ Day 4: Operators
+- ✅ Day 5: Logical Operators
 
 ---
 
