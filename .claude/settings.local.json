@@ -3,7 +3,11 @@
     "allow": [
       "Bash(node biodata-generator:*)",
       "Bash(git commit:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(node:*)"
     ]
   }
 }

@@ -454,9 +454,12 @@ console.log("Pekerjaan:", /* hasil */);
 
 ### Day 8: If/Else Statement
 **Materi:**
-- [ ] `if`, `else if`, `else`
-- [ ] Nested conditions
-- [ ] Ternary operator (`? :`)
+- [x] `if`, `else if`, `else`
+- [x] Nested conditions
+- [x] Ternary operator (`? :`)
+- [x] Logical operators dalam conditional
+- [x] Multiple conditions dengan AND/OR
+- [x] Error handling dengan if/else
 
 **🔨 Praktik:**
 ```javascript
@@ -477,13 +480,19 @@ let angka = 7;
 let hasil = angka % 2 === 0 ? "Genap" : "Ganjil";
 console.log(angka, "adalah", hasil);
 
-// 3. Buat sistem diskon belanja
-// >= 500rb = 20% diskon
-// >= 200rb = 10% diskon
-// < 200rb = tidak ada diskon
-let totalBelanja = 350000;
-// Hitung diskon dan total bayar
+// 3. Sistem diskon belanja dengan nested if
+// - Member: diskon 20% jika belanja >= 500rb, 10% jika >= 200rb
+// - Non-member: diskon 10% jika belanja >= 500rb, 5% jika >= 200rb
+// - < 200rb: tidak ada diskon
+
+// 4. Validasi form dengan nested conditions
+// 5. Game status checker dengan multiple ranges
+// 6. BMI calculator dengan kategori
+// 7. FizzBuzz challenge
+// 8. Simple calculator dengan error handling
 ```
+
+**📝 Status:** ✅ **Selesai pada 15 Desember 2024** (100% - All exercises completed)
 
 ---
 
@@ -1173,8 +1182,8 @@ Buat Todo List lengkap dengan:
 
 | Week | Topics | Status |
 |------|--------|--------|
-| 1 | Fundamentals | 🔄 (6/7 days) |
-| 2 | Control Flow & Functions | ⬜ |
+| 1 | Fundamentals | ✅ (7/7 days) |
+| 2 | Control Flow & Functions | 🔄 (1/8 days) |
 | 3 | Arrays & Objects | ⬜ |
 | 4 | DOM & Async | ⬜ |
 
@@ -1185,6 +1194,8 @@ Buat Todo List lengkap dengan:
 - ✅ Day 4: Operators
 - ✅ Day 5: Logical Operators
 - ✅ Day 6: String Methods
+- ✅ Day 7: Mini Project - Biodata Generator
+- ✅ Day 8: If/Else Statement
 
 ---
 
