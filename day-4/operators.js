@@ -25,6 +25,18 @@ let b = 4;
 // - a ** b = ? (pangkat)
 
 // Write your answers here:
+let penjumlahan = a + b;
+console.log(penjumlahan);
+let pengurangan = a - b;
+console.log(pengurangan);
+let pengakalian = a * b;
+console.log(pengakalian);
+let pembagian = a / b;
+console.log(pembagian);
+let modulus = a % b;
+console.log(modulus);
+let pangkat = a ** b
+console.log(pangkat);
 
 
 // ========================================
@@ -38,7 +50,10 @@ let x = 10;
 // x = x / 4;  // Ubah menjadi x /= 4
 
 // Tulis bentuk sederhananya:
-
+x += 5
+x *= 3
+x -= 2
+x /= 4
 
 // ========================================
 // SOAL 3: Operator Perbandingan
@@ -54,7 +69,14 @@ let x = 10;
 // 5 <= 4        // ?
 
 // Tulis hasilnya di sini:
-
+console.log(10 == "10")
+console.log(10 === "10")
+console.log(10 != "10")
+console.log(10 !== "10")
+console.log(5 > 3)
+console.log(5 < 10)
+console.log(5 <= 4)
+console.log(5 >= 5)
 
 // ========================================
 // SOAL 4: Aplikasi Kalkulator
@@ -72,7 +94,18 @@ let num2 = 8;
 // - Rata-rata
 
 // Write your calculations:
-
+let numpnum = num1 + num2;
+let numMnum = num1 - num2;
+let numKnum = num1 * num2;
+let numBnum = num1 / num2;
+let numModnum = num1 % num2;
+let numRnum = (num1+num2)/2
+console.log(numpnum)
+console.log(numMnum)
+console.log(numKnum)
+console.log(numBnum)
+console.log(numModnum)
+console.log(numRnum)
 
 // ========================================
 // SOAL 5: Konversi Suhu
@@ -89,6 +122,10 @@ let fahrenheit = 86;
 // 86°F = ?°C
 
 // Write your calculations:
+let celsiusToFarenheit = (celsius*(9/5)) + 32
+let fahrenheitToCelcius = (fahrenheit - 32) * (5/9)
+console.log(celsiusToFarenheit);
+console.log(fahrenheitToCelcius);
 
 
 // ========================================
@@ -101,7 +138,7 @@ let umurTahun = 23;  // Ganti dengan umur Anda
 let umurHari;        // Hitung umur dalam hari
 
 // Write your calculation:
-
+umurHari = umurTahun * 365
 
 // ========================================
 // SOAL 7: Body Mass Index (BMI)
@@ -115,7 +152,7 @@ let tinggi = 1.70;   // meter
 let bmi;             // Hitung BMI-nya
 
 // Write your calculation:
-
+bmi = berat / (tinggi * tinggi);
 
 // ========================================
 // SOAL 8: Increment & Decrement

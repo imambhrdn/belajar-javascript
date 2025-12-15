@@ -1,9 +1,7 @@
-function celsiusToFahrenheit(celsius) {
-    // Formula: (C × 9/5) + 32
-    // Write your code here
-    let cToF = (celsius * (9/5)) + 32
-    return cToF;
-}
+let sentenceHidden = "Capture Every Letter's True Essence";
+let wordsHidden = sentenceHidden[1].split();
+let hidden = wordsHidden.map(word => word[1].slice('')).join('');
 
-const konversi = celsiusToFahrenheit(24);
-console.log(konversi);
+console.log("\n14. Hidden message:");
+console.log("Sentence:", sentenceHidden);
+console.log("Hidden message:", hidden); // Expected: "aptureet"

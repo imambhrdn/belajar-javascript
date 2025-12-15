@@ -6,15 +6,18 @@ Selamat datang di latihan JavaScript interaktif! Folder ini berisi latihan haria
 
 ### 1. Pilih Latihan
 Setiap hari memiliki file latihan tersendiri di folder `exercises/`:
-- `exercises/day2-variables.js` - Variabel
-- `exercises/day3-datatypes.js` - Tipe Data
-- `exercises/day4-operators.js` - Operator
+- `exercises/day-2/variables.js` - Variabel
+- `exercises/day-3/datatypes.js` - Tipe Data
+- `exercises/day-4/operators.js` - Operator
+- `exercises/day-5/logical-operators.js` - Operator Logika
+- `exercises/day-6/string-methods.js` - String Methods
+- `exercises/day-7/biodata-generator.js` - Mini Project: Biodata Generator
 
 ### 2. Kerjakan Latihan
 Buka file latihan yang ingin dikerjakan:
 ```bash
 # Contoh untuk Day 2
-code exercises/day2-variables.js
+code exercises/day-2/variables.js
 ```
 
 Ikuti petunjuk dan jawab setiap soal di bagian yang sudah disediakan.
@@ -23,7 +26,7 @@ Ikuti petunjuk dan jawab setiap soal di bagian yang sudah disediakan.
 Setelah selesai, jalankan checker untuk melihat hasil:
 ```bash
 # Format: node checker.js <file-path> <day-number>
-node checker.js exercises/day2-variables.js 2
+node checker.js exercises/day-2/variables.js 2
 ```
 
 ## 📊 Format Output Checker
@@ -35,7 +38,7 @@ Checker akan menampilkan:
 
 Contoh output:
 ```
-📝 Checking exercises/day2-variables.js - Day 2
+📝 Checking exercises/day-2/variables.js - Day 2
 ==================================================
 
 ✅ PASSED:
@@ -57,9 +60,18 @@ Contoh output:
 ```
 belajarJS/
 ├── exercises/           # Folder berisi file latihan
-│   ├── day2-variables.js
-│   ├── day3-datatypes.js
-│   └── day4-operators.js
+│   ├── day-2/
+│   │   └── variables.js
+│   ├── day-3/
+│   │   └── datatypes.js
+│   ├── day-4/
+│   │   └── operators.js
+│   ├── day-5/
+│   │   └── logical-operators.js
+│   ├── day-6/
+│   │   └── string-methods.js
+│   └── day-7/
+│       └── biodata-generator.js
 ├── checker.js          # Program untuk mengecek jawaban
 ├── roadmap-30-hari-javascript.md  # Panduan belajar
 └── README.md           # File ini
@@ -78,6 +90,9 @@ belajarJS/
 - **Day 2**: Variabel (var, let, const)
 - **Day 3**: Tipe data primitif
 - **Day 4**: Operator aritmatika dan perbandingan
+- **Day 5**: Operator logika (AND, OR, NOT)
+- **Day 6**: String methods dan manipulasi
+- **Day 7**: Mini Project - Biodata Generator
 
 ## ❓ Bantuan
 

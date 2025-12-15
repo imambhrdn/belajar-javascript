@@ -3,6 +3,58 @@
 
 const fs = require('fs');
 
+// Function to check Day 1: Introduction exercises
+function checkDay1(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Hello World
+    results.total++;
+    if (code.includes('console.log') && (code.includes('Halo') || code.includes('Hello') || code.includes('halo') || code.includes('hello'))) {
+        results.passed.push('✓ Menampilkan Hello World');
+    } else {
+        results.failed.push('✗ Belum menampilkan Hello World');
+    }
+
+    // Check 2: Nama dan umur
+    results.total++;
+    if (code.includes('console.log') && (code.includes('nama') || code.includes('Nama'))) {
+        results.passed.push('✓ Menampilkan nama');
+    } else {
+        results.failed.push('✗ Belum menampilkan nama');
+    }
+
+    // Check 3: Umur
+    results.total++;
+    if (code.includes('console.log') && (code.includes('umur') || code.includes('Umur') || code.includes('tahun'))) {
+        results.passed.push('✓ Menampilkan umur');
+    } else {
+        results.failed.push('✗ Belum menampilkan umur');
+    }
+
+    // Check 4: 5 hal favorit
+    results.total++;
+    const consoleLogCount = (code.match(/console\.log/g) || []).length;
+    if (consoleLogCount >= 5) {
+        results.passed.push('✓ Menampilkan 5 hal favorit');
+    } else {
+        results.failed.push('✗ Belum menampilkan 5 hal favorit');
+    }
+
+    // Check 5: Comments
+    results.total++;
+    if (code.includes('//') || code.includes('/*')) {
+        results.passed.push('✓ Menggunakan comments');
+    } else {
+        results.failed.push('✗ Belum menggunakan comments');
+    }
+
+    return results;
+}
+
 // Function to check Day 2: Variables exercises
 function checkDay2(code) {
     const results = {
@@ -216,6 +268,231 @@ function checkDay4(code) {
     return results;
 }
 
+// Function to check Day 5: Logical Operators exercises
+function checkDay5(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Operator AND
+    results.total++;
+    if (code.includes('let canDrive = isAdult && hasLicense')) {
+        results.passed.push('✓ Menggunakan operator AND (&&)');
+    } else {
+        results.failed.push('✗ Belum menggunakan operator AND dengan benar');
+    }
+
+    // Check 2: Operator OR
+    results.total++;
+    if (code.includes('let isDayOff = isWeekend || isHoliday')) {
+        results.passed.push('✓ Menggunakan operator OR (||)');
+    } else {
+        results.failed.push('✗ Belum menggunakan operator OR dengan benar');
+    }
+
+    // Check 3: Operator NOT
+    results.total++;
+    if (code.includes('let canPlay = !isRaining')) {
+        results.passed.push('✓ Menggunakan operator NOT (!)');
+    } else {
+        results.failed.push('✗ Belum menggunakan operator NOT dengan benar');
+    }
+
+    // Check 4: Kombinasi operator dengan kurung
+    results.total++;
+    if (code.includes('let canEnter = (age >= 18 && hasTicket) || isVIP')) {
+        results.passed.push('✓ Kombinasi operator dengan grouping');
+    } else {
+        results.failed.push('✗ Belum menggunakan grouping dengan benar');
+    }
+
+    // Check 5: Default value dengan OR
+    results.total++;
+    if (code.includes('let displayName = userName || "Guest"')) {
+        results.passed.push('✓ Default value dengan operator OR');
+    } else {
+        results.failed.push('✗ Belum menggunakan OR untuk default value');
+    }
+
+    // Check 6: Kondisi kelulusan
+    results.total++;
+    if (code.includes('let isPassed = studentScore >= 70 && attendance >= 80')) {
+        results.passed.push('✓ Logika kelulusan dengan AND');
+    } else {
+        results.failed.push('✗ Logika kelulusan salah');
+    }
+
+    // Check 7: Validasi form kompleks
+    results.total++;
+    if (code.includes('let isFormValid = email.includes("@") && (password.length > 8 || isLoggedIn)')) {
+        results.passed.push('✓ Validasi form dengan AND + OR');
+    } else {
+        results.failed.push('✗ Validasi form belum benar');
+    }
+
+    // Check 8: Shopping cart logic
+    results.total++;
+    if (code.includes('let canCheckout = cartItems.length > 0 && (isLoggedIn2 || guestCheckoutEnabled)')) {
+        results.passed.push('✓ Logic shopping cart');
+    } else {
+        results.failed.push('✗ Logic shopping cart belum benar');
+    }
+
+    // Check 9: Boolean() function
+    results.total++;
+    const booleanCount = (code.match(/Boolean\(/g) || []).length;
+    if (booleanCount >= 3) {
+        results.passed.push('✓ Menggunakan Boolean() function');
+    } else {
+        results.failed.push('✗ Perlu menggunakan Boolean() function');
+    }
+
+    // Check 10: Multiple conditions untuk game
+    results.total++;
+    if (code.includes('let canAttack = isAlive && (hasWeapon || hasMagic)')) {
+        results.passed.push('✓ Multiple conditions untuk game logic');
+    } else {
+        results.failed.push('✗ Game logic belum benar');
+    }
+
+    return results;
+}
+
+// Function to check Day 6: String Methods exercises
+function checkDay6(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: length property
+    results.total++;
+    if (code.includes('let panjangKalimat = kalimat.length')) {
+        results.passed.push('✓ Menggunakan property length');
+    } else {
+        results.failed.push('✗ Belum menggunakan property length');
+    }
+
+    // Check 2: toUpperCase dan toLowerCase
+    results.total++;
+    if (code.includes('toUpperCase()') && code.includes('toLowerCase()')) {
+        results.passed.push('✓ Menggunakan toUpperCase dan toLowerCase');
+    } else {
+        results.failed.push('✗ Belum menggunakan toUpperCase/toLowerCase');
+    }
+
+    // Check 3: trim method
+    results.total++;
+    if (code.includes('.trim()')) {
+        results.passed.push('✓ Menggunakan method trim()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method trim()');
+    }
+
+    // Check 4: indexOf method
+    results.total++;
+    if (code.includes('.indexOf(')) {
+        results.passed.push('✓ Menggunakan method indexOf()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method indexOf()');
+    }
+
+    // Check 5: includes method
+    results.total++;
+    if (code.includes('.includes(')) {
+        results.passed.push('✓ Menggunakan method includes()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method includes()');
+    }
+
+    // Check 6: slice method
+    results.total++;
+    if (code.includes('.slice(')) {
+        results.passed.push('✓ Menggunakan method slice()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method slice()');
+    }
+
+    // Check 7: substring method
+    results.total++;
+    if (code.includes('.substring(')) {
+        results.passed.push('✓ Menggunakan method substring()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method substring()');
+    }
+
+    // Check 8: replace method
+    results.total++;
+    if (code.includes('.replace(')) {
+        results.passed.push('✓ Menggunakan method replace()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method replace()');
+    }
+
+    // Check 9: split method
+    results.total++;
+    if (code.includes('.split(')) {
+        results.passed.push('✓ Menggunakan method split()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method split()');
+    }
+
+    // Check 10: repeat method
+    results.total++;
+    if (code.includes('.repeat(')) {
+        results.passed.push('✓ Menggunakan method repeat()');
+    } else {
+        results.failed.push('✗ Belum menggunakan method repeat()');
+    }
+
+    // Check 11: Capitalize logic
+    results.total++;
+    if (code.includes('charCodeAt') || (code.includes('charAt') && code.includes('toUpperCase') && code.includes('slice'))) {
+        results.passed.push('✓ Logika capitalize dengan method string');
+    } else {
+        results.failed.push('✗ Logica capitalize belum benar');
+    }
+
+    // Check 12: Phone formatting
+    results.total++;
+    if (code.includes('phoneNumber.slice') && code.includes('"-"')) {
+        results.passed.push('✓ Format nomor telepon dengan slice');
+    } else {
+        results.failed.push('✗ Format nomor telepon belum benar');
+    }
+
+    // Check 13: Palindrome check
+    results.total++;
+    if (code.includes('split("")') && code.includes('reverse()') && code.includes('join("")')) {
+        results.passed.push('✓ Logika palindrome dengan reverse dan join');
+    } else {
+        results.failed.push('✗ Logika palindrome belum benar');
+    }
+
+    // Check 14: Multiple string methods
+    results.total++;
+    const stringMethods = ['toUpperCase', 'toLowerCase', 'trim', 'slice', 'split', 'join', 'replace'];
+    const usedMethods = stringMethods.filter(method => code.includes(method));
+    if (usedMethods.length >= 5) {
+        results.passed.push('✓ Menggunakan multiple string methods');
+    } else {
+        results.failed.push('✗ Perlu menggunakan lebih banyak string methods');
+    }
+
+    // Check 15: Password strength checker
+    results.total++;
+    if (code.includes('checkPasswordStrength') && code.includes('test(')) {
+        results.passed.push('✓ Password strength checker function');
+    } else {
+        results.failed.push('✗ Password strength checker belum lengkap');
+    }
+
+    return results;
+}
+
 // Main checker function
 function checkExercise(filePath, day) {
     try {
@@ -226,6 +503,9 @@ function checkExercise(filePath, day) {
 
         let results;
         switch(day) {
+            case 1:
+                results = checkDay1(code);
+                break;
             case 2:
                 results = checkDay2(code);
                 break;
@@ -234,6 +514,12 @@ function checkExercise(filePath, day) {
                 break;
             case 4:
                 results = checkDay4(code);
+                break;
+            case 5:
+                results = checkDay5(code);
+                break;
+            case 6:
+                results = checkDay6(code);
                 break;
             default:
                 console.log('Day not supported yet');
@@ -266,11 +552,12 @@ function checkExercise(filePath, day) {
 // Check if file path is provided
 if (process.argv.length < 3) {
     console.log('Usage: node checker.js <file-path> [day-number]');
-    console.log('Example: node checker.js variable.js 2');
+    console.log('Example: node checker.js variables.js 2');
+    console.log('Supported days: 1, 2, 3, 4, 5, 6');
     process.exit(1);
 }
 
 const filePath = process.argv[2];
-const day = process.argv[3] || 2; // Default to day 2
+const day = process.argv[3] || 1; // Default to day 1
 
 checkExercise(filePath, parseInt(day));
