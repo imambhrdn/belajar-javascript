@@ -12,6 +12,15 @@ Setiap hari memiliki file latihan tersendiri di folder `exercises/`:
 - `exercises/day-5/logical-operators.js` - Operator Logika
 - `exercises/day-6/string-methods.js` - String Methods
 - `exercises/day-7/biodata-generator.js` - Mini Project: Biodata Generator
+<<<<<<<< HEAD:exercises/README-exercises.md
+- `exercises/day-8/if-else.js` - If/Else Statement
+- `exercises/day-9/switch-case.js` - Switch Case
+<<<<<<< HEAD:README-exercises.md
+- `exercises/day-10/for-loop.js` - For Loop
+=======
+>>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
+========
+>>>>>>>> 097f5e4ecb1b8dd95f340632e47c9cfabfb9fe6f:README-exercises.md
 
 ### 2. Kerjakan Latihan
 Buka file latihan yang ingin dikerjakan:
@@ -72,6 +81,21 @@ belajarJS/
 │   │   └── string-methods.js
 │   └── day-7/
 │       └── biodata-generator.js
+<<<<<<< HEAD:README-exercises.md
+=======
+<<<<<<<< HEAD:exercises/README-exercises.md
+>>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
+│   ├── day-8/
+│   │   └── if-else.js
+│   └── day-9/
+│       └── switch-case.js
+<<<<<<< HEAD:README-exercises.md
+│   └── day-10/
+│       └── for-loop.js
+=======
+========
+>>>>>>>> 097f5e4ecb1b8dd95f340632e47c9cfabfb9fe6f:README-exercises.md
+>>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
 ├── checker.js          # Program untuk mengecek jawaban
 ├── roadmap-30-hari-javascript.md  # Panduan belajar
 └── README.md           # File ini
@@ -93,6 +117,17 @@ belajarJS/
 - **Day 5**: Operator logika (AND, OR, NOT)
 - **Day 6**: String methods dan manipulasi
 - **Day 7**: Mini Project - Biodata Generator
+<<<<<<< HEAD:README-exercises.md
+- **Day 8**: If/Else Statement
+- **Day 9**: Switch Case
+- **Day 10**: For Loop
+=======
+<<<<<<<< HEAD:exercises/README-exercises.md
+- **Day 8**: If/Else Statement
+- **Day 9**: Switch Case
+========
+>>>>>>>> 097f5e4ecb1b8dd95f340632e47c9cfabfb9fe6f:README-exercises.md
+>>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
 
 ## ❓ Bantuan
 

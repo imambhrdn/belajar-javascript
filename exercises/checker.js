@@ -493,6 +493,378 @@ function checkDay6(code) {
     return results;
 }
 
+// Function to check Day 7: Biodata Generator exercises
+function checkDay7(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Input data diri
+    results.total++;
+    if (code.includes('const namaDepan') || code.includes('let namaDepan')) {
+        results.passed.push('✓ Mendeklarasikan variabel nama depan');
+    } else {
+        results.failed.push('✗ Belum mendeklarasikan variabel nama depan');
+    }
+
+    // Check 2: Nama belakang
+    results.total++;
+    if (code.includes('namaBelakang') || code.includes('namaBelakang')) {
+        results.passed.push('✓ Mendeklarasikan variabel nama belakang');
+    } else {
+        results.failed.push('✗ Belum mendeklarasikan variabel nama belakang');
+    }
+
+    // Check 3: Tahun lahir
+    results.total++;
+    if (code.includes('tahunLahir') && code.includes('19')) {
+        results.passed.push('✓ Mendeklarasikan variabel tahun lahir');
+    } else {
+        results.failed.push('✗ Belum mendeklarasikan variabel tahun lahir');
+    }
+
+    // Check 4: Email
+    results.total++;
+    if (code.includes('email') && code.includes('@')) {
+        results.passed.push('✓ Mendeklarasikan variabel email');
+    } else {
+        results.failed.push('✗ Belum mendeklarasikan variabel email');
+    }
+
+    // Check 5: Pekerjaan
+    results.total++;
+    if (code.includes('pekerjaan')) {
+        results.passed.push('✓ Mendeklarasikan variabel pekerjaan');
+    } else {
+        results.failed.push('✗ Belum mendeklarasikan variabel pekerjaan');
+    }
+
+    // Check 6: Process nama lengkap
+    results.total++;
+    if ((code.includes('toUpperCase') && code.includes('namaDepan')) || (code.includes('charAt') && code.includes('toUpperCase'))) {
+        results.passed.push('✓ Memproses nama lengkap (capitalize)');
+    } else {
+        results.failed.push('✗ Belum memproses nama lengkap dengan benar');
+    }
+
+    // Check 7: Hitung umur
+    results.total++;
+    if (code.includes('new Date().getFullYear()') || (code.includes('2024') && code.includes('-'))) {
+        results.passed.push('✓ Menghitung umur');
+    } else {
+        results.failed.push('✗ Belum menghitung umur');
+    }
+
+    // Check 8: Bersihkan email
+    results.total++;
+    if (code.includes('trim') && code.includes('toLowerCase')) {
+        results.passed.push('✓ Membersihkan email (trim & toLowerCase)');
+    } else {
+        results.failed.push('✗ Belum membersihkan email');
+    }
+
+    // Check 9: Format pekerjaan
+    results.total++;
+    if (code.includes('pekerjaan') && (code.includes('toUpperCase') || code.includes('charAt'))) {
+        results.passed.push('✓ Memformat pekerjaan');
+    } else {
+        results.failed.push('✗ Belum memformat pekerjaan');
+    }
+
+    // Check 10: Tampilkan output
+    results.total++;
+    const consoleLogCount = (code.match(/console\.log/g) || []).length;
+    if (consoleLogCount >= 5) {
+        results.passed.push('✓ Menampilkan biodata lengkap');
+    } else {
+        results.failed.push('✗ Belum menampilkan biodata lengkap');
+    }
+
+    return results;
+}
+
+// Function to check Day 8: If/Else exercises
+function checkDay8(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Sistem grading
+    results.total++;
+    if (code.includes('if (nilai >= 90)') && code.includes('else if')) {
+        results.passed.push('✓ Membuat sistem grading dengan if/else if');
+    } else {
+        results.failed.push('✗ Belum membuat sistem grading');
+    }
+
+    // Check 2: Multiple grades
+    results.total++;
+    const gradeCount = (code.match(/Grade:/g) || []).length;
+    if (gradeCount >= 4) {
+        results.passed.push('✓ Multiple grade categories');
+    } else {
+        results.failed.push('✗ Grade categories kurang dari 4');
+    }
+
+    // Check 3: Ternary operator
+    results.total++;
+    if (code.includes('?') && code.includes(':')) {
+        results.passed.push('✓ Menggunakan ternary operator');
+    } else {
+        results.failed.push('✗ Belum menggunakan ternary operator');
+    }
+
+    // Check 4: Nested if untuk diskon
+    results.total++;
+    if (code.includes('if (isMember)') && code.includes('if (totalBelanja')) {
+        results.passed.push('✓ Nested if untuk sistem diskon');
+    } else {
+        results.failed.push('✗ Belum membuat nested if diskon');
+    }
+
+    // Check 5: BMI calculator
+    results.total++;
+    if (code.includes('bmi') && code.includes('if') && (code.includes('kurus') || code.includes('normal'))) {
+        results.passed.push('✓ BMI calculator dengan kategori');
+    } else {
+        results.failed.push('✗ Belum membuat BMI calculator');
+    }
+
+    // Check 6: Login validation
+    results.total++;
+    if (code.includes('email.includes("@")') && code.includes('password.length')) {
+        results.passed.push('✓ Validasi login dengan multiple conditions');
+    } else {
+        results.failed.push('✗ Validasi login belum lengkap');
+    }
+
+    // Check 7: FizzBuzz
+    results.total++;
+    if (code.includes('FizzBuzz') && code.includes('i % 15') || (code.includes('i % 3') && code.includes('i % 5'))) {
+        results.passed.push('✓ FizzBuzz challenge');
+    } else {
+        results.failed.push('✗ FizzBuzz belum benar');
+    }
+
+    // Check 8: Game status
+    results.total++;
+    if (code.includes('health') && (code.includes('Game Over') || code.includes('game over'))) {
+        results.passed.push('✓ Game status checker');
+    } else {
+        results.failed.push('✗ Game status belum diimplementasi');
+    }
+
+    return results;
+}
+
+// Function to check Day 9: Switch Case exercises
+function checkDay9(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Switch untuk hari
+    results.total++;
+    if (code.includes('switch (hari)') && code.includes('case 1:')) {
+        results.passed.push('✓ Switch statement untuk nama hari');
+    } else {
+        results.failed.push('✗ Belum membuat switch untuk hari');
+    }
+
+    // Check 2: Case untuk semua hari
+    results.total++;
+    const caseCount = (code.match(/case \d+:/g) || []).length;
+    if (caseCount >= 7) {
+        results.passed.push('✓ Case untuk semua hari (1-7)');
+    } else {
+        results.failed.push('✗ Case untuk hari kurang dari 7');
+    }
+
+    // Check 3: Break statements
+    results.total++;
+    const breakCount = (code.match(/break;/g) || []).length;
+    if (breakCount >= 7) {
+        results.passed.push('✓ Menggunakan break statement di setiap case');
+    } else {
+        results.failed.push('✗ Break statement kurang lengkap');
+    }
+
+    // Check 4: Default case
+    results.total++;
+    if (code.includes('default:')) {
+        results.passed.push('✓ Menggunakan default case');
+    } else {
+        results.failed.push('✗ Belum menggunakan default case');
+    }
+
+    // Check 5: Switch untuk kalkulator
+    results.total++;
+    if (code.includes('switch (operator)') && (code.includes('case "+"') || code.includes('case "*"'))) {
+        results.passed.push('✓ Switch untuk kalkulator');
+    } else {
+        results.failed.push('✗ Belum membuat switch kalkulator');
+    }
+
+    // Check 6: Multiple operator cases
+    results.total++;
+    const operatorCount = (code.match(/case [+\-*/%]:/g) || []).length;
+    if (operatorCount >= 4) {
+        results.passed.push('✓ Multiple operator cases');
+    } else {
+        results.failed.push('✗ Operator cases kurang dari 4');
+    }
+
+    // Check 7: Switch untuk grade
+    results.total++;
+    if (code.includes('switch (true)') || code.includes('switch(grade)')) {
+        results.passed.push('✓ Switch untuk grade evaluation');
+    } else {
+        results.failed.push('✗ Belum membuat switch untuk grade');
+    }
+
+    // Check 8: Switch dengan range
+    results.total++;
+    if (code.includes('case 90:') || code.includes('case 80:')) {
+        results.passed.push('✓ Switch dengan nilai range');
+    } else {
+        results.failed.push('✗ Switch range belum benar');
+    }
+
+    // Check 9: Switch untuk arah
+    results.total++;
+    if (code.includes('arah') && code.includes('switch') && (code.includes('Utara') || code.includes('Selatan'))) {
+        results.passed.push('✓ Switch untuk arah mata angin');
+    } else {
+        results.failed.push('✗ Switch arah belum diimplementasi');
+    }
+
+    // Check 10: Switch bulan
+    results.total++;
+    if (code.includes('bulan') && code.includes('switch') && (code.includes('Januari') || code.includes('Februari'))) {
+        results.passed.push('✓ Switch untuk nama bulan');
+    } else {
+        results.failed.push('✗ Switch bulan belum diimplementasi');
+    }
+
+    return results;
+}
+
+// Function to check Day 10: For Loop exercises
+function checkDay10(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Basic for loop 1-10
+    results.total++;
+    if (code.includes('for (let i = 1; i <= 10; i++)')) {
+        results.passed.push('✓ For loop angka 1-10');
+    } else {
+        results.failed.push('✗ Belum membuat for loop 1-10');
+    }
+
+    // Check 2: Tabel perkalian
+    results.total++;
+    if (code.includes('for (let i = 1; i <= 10; i++)') && code.includes('*')) {
+        results.passed.push('✓ Tabel perkalian dengan for loop');
+    } else {
+        results.failed.push('✗ Tabel perkalian belum benar');
+    }
+
+    // Check 3: Total 1-100
+    results.total++;
+    if (code.includes('total') && code.includes('for (let i = 1; i <= 100; i++)') && code.includes('+=')) {
+        results.passed.push('✓ Menghitung total 1-100');
+    } else {
+        results.failed.push('✗ Belum menghitung total 1-100');
+    }
+
+    // Check 4: Genap/Ganjil
+    results.total++;
+    if (code.includes('% 2') && code.includes('if')) {
+        results.passed.push('✓ Cek genap/ganjil dengan modulo');
+    } else {
+        results.failed.push('✗ Belum cek genap/ganjil');
+    }
+
+    // Check 5: Segitiga bintang
+    results.total++;
+    if (code.includes('nested') || (code.includes('for') && code.includes('for') && code.includes('*'))) {
+        results.passed.push('✓ Segitiga bintang dengan nested loop');
+    } else {
+        results.failed.push('✗ Segitiga bintang belum benar');
+    }
+
+    // Check 6: Reverse loop
+    results.total++;
+    if (code.includes('i--') || code.includes('i = i - 1')) {
+        results.passed.push('✓ Reverse loop (descending)');
+    } else {
+        results.failed.push('✗ Belum membuat reverse loop');
+    }
+
+    // Check 7: Countdown
+    results.total++;
+    if (code.includes('Blast off') || code.includes('countdown')) {
+        results.passed.push('✓ Countdown dengan pesan');
+    } else {
+        results.failed.push('✗ Countdown belum lengkap');
+    }
+
+    // Check 8: Kuadrat
+    results.total++;
+    if (code.includes('i * i') || code.includes('Math.pow(i, 2)')) {
+        results.passed.push('✓ Menghitung kuadrat');
+    } else {
+        results.failed.push('✗ Belum menghitung kuadrat');
+    }
+
+    // Check 9: Fibonacci
+    results.total++;
+    if ((code.includes('a = b') && code.includes('b = a + b')) ||
+        (code.includes('let c = a + b')) ||
+        (code.includes('console.log(a)') && code.includes('console.log(b)'))) {
+        results.passed.push('✓ Deret Fibonacci');
+    } else {
+        results.failed.push('✗ Deret Fibonacci belum benar');
+    }
+
+    // Check 10: Pola angka
+    results.total++;
+    if ((code.includes('for (let i = 1; i <= 5; i++)') && code.includes('for (let j = 1; j <= i; j++)')) ||
+        (code.includes('let baris =') && code.includes('baris += i'))) {
+        results.passed.push('✓ Pola angka dengan nested loop');
+    } else {
+        results.failed.push('✗ Pola angka belum benar');
+    }
+
+    // Check 11: for...of
+    results.total++;
+    if (code.includes('for (') && code.includes('of ')) {
+        results.passed.push('✓ Menggunakan for...of loop');
+    } else {
+        results.failed.push('✗ Belum menggunakan for...of');
+    }
+
+    // Check 12: for...in
+    results.total++;
+    if (code.includes('for (') && code.includes('in ')) {
+        results.passed.push('✓ Menggunakan for...in loop');
+    } else {
+        results.failed.push('✗ Belum menggunakan for...in');
+    }
+
+    return results;
+}
+
 // Main checker function
 function checkExercise(filePath, day) {
     try {
@@ -520,6 +892,18 @@ function checkExercise(filePath, day) {
                 break;
             case 6:
                 results = checkDay6(code);
+                break;
+            case 7:
+                results = checkDay7(code);
+                break;
+            case 8:
+                results = checkDay8(code);
+                break;
+            case 9:
+                results = checkDay9(code);
+                break;
+            case 10:
+                results = checkDay10(code);
                 break;
             default:
                 console.log('Day not supported yet');
@@ -553,7 +937,7 @@ function checkExercise(filePath, day) {
 if (process.argv.length < 3) {
     console.log('Usage: node checker.js <file-path> [day-number]');
     console.log('Example: node checker.js variables.js 2');
-    console.log('Supported days: 1, 2, 3, 4, 5, 6');
+    console.log('Supported days: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10');
     process.exit(1);
 }
 

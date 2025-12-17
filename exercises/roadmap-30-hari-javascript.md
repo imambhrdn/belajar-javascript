@@ -498,9 +498,9 @@ console.log(angka, "adalah", hasil);
 
 ### Day 9: Switch Case
 **Materi:**
-- [ ] Syntax switch case
-- [ ] `break` statement
-- [ ] `default` case
+- [x] Syntax switch case
+- [x] `break` statement
+- [x] `default` case
 
 **🔨 Praktik:**
 ```javascript
@@ -526,13 +526,15 @@ switch (operator) {
 console.log(result);
 ```
 
+**📝 Status:** ✅ **Selesai pada 17 Desember 2024** (100% - Score: 10/10)
+
 ---
 
 ### Day 10: For Loop
 **Materi:**
-- [ ] Basic `for` loop
-- [ ] `for...of` (untuk array)
-- [ ] `for...in` (untuk object)
+- [x] Basic `for` loop
+- [x] `for...of` (untuk array)
+- [x] `for...in` (untuk object)
 
 **🔨 Praktik:**
 ```javascript
@@ -561,6 +563,8 @@ console.log("Total 1-100:", total);
 // ****
 // *****
 ```
+
+**📝 Status:** ✅ **Selesai pada 17 Desember 2024** (100% - Score: 12/12)
 
 ---
 
@@ -1183,7 +1187,7 @@ Buat Todo List lengkap dengan:
 | Week | Topics | Status |
 |------|--------|--------|
 | 1 | Fundamentals | ✅ (7/7 days) |
-| 2 | Control Flow & Functions | 🔄 (1/8 days) |
+| 2 | Control Flow & Functions | 🔄 (3/8 days) |
 | 3 | Arrays & Objects | ⬜ |
 | 4 | DOM & Async | ⬜ |
 
@@ -1196,6 +1200,8 @@ Buat Todo List lengkap dengan:
 - ✅ Day 6: String Methods
 - ✅ Day 7: Mini Project - Biodata Generator
 - ✅ Day 8: If/Else Statement
+- ✅ Day 9: Switch Case
+- ✅ Day 10: For Loop
 
 ---
 
