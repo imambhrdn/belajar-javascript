@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(node checker.js:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(cat:*)",
+      "Bash(git config:*)",
+      "Bash(git rebase:*)",
+      "Bash(git stash:*)",
+      "Bash(git reset:*)"
     ]
   }
 }
