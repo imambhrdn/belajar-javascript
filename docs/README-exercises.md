@@ -2,6 +2,8 @@
 
 Selamat datang di latihan JavaScript interaktif! Folder ini berisi latihan harian untuk meningkatkan pemahaman JavaScript Anda.
 
+*Repository ini dikelola oleh Imam Bahrudin*
+
 ## 📋 Cara Penggunaan
 
 ### 1. Pilih Latihan

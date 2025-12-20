@@ -570,9 +570,9 @@ console.log("Total 1-100:", total);
 
 ### Day 11: While Loop
 **Materi:**
-- [ ] `while` loop
-- [ ] `do...while` loop
-- [ ] `break` dan `continue`
+- [x] `while` loop
+- [x] `do...while` loop
+- [x] `break` dan `continue`
 
 **🔨 Praktik:**
 ```javascript
@@ -601,13 +601,15 @@ for (let i = 1; i <= 20; i++) {
 }
 ```
 
+**📝 Status:** ✅ **Selesai pada 18 Desember 2024** (100% - Score: 10/10)
+
 ---
 
 ### Day 12: Functions Dasar
 **Materi:**
-- [ ] Function declaration
-- [ ] Function expression
-- [ ] Arrow function (`=>`)
+- [x] Function declaration
+- [x] Function expression
+- [x] Arrow function (`=>`)
 
 **🔨 Praktik:**
 ```javascript
@@ -631,13 +633,15 @@ const sayHey = () => console.log("Hey!");
 // - Menampilkan random number 1-100
 ```
 
+**📝 Status:** ✅ **Selesai pada 19 Desember 2024** (100% - Score: 12/12)
+
 ---
 
 ### Day 13: Function Parameters & Return
 **Materi:**
-- [ ] Parameters dan arguments
-- [ ] `return` statement
-- [ ] Default parameters
+- [x] Parameters dan arguments
+- [x] `return` statement
+- [x] Default parameters
 
 **🔨 Praktik:**
 ```javascript
@@ -662,6 +666,8 @@ console.log(hasil);
 // - isEven(num) -> return true/false
 // - getMax(a, b) -> return yang lebih besar
 ```
+
+**📝 Status:** ✅ **Selesai pada 19 Desember 2024** (100% - Score: 8/8)
 
 ---
 
@@ -691,15 +697,17 @@ function fizzBuzz(n) {
 fizzBuzz(30);
 ```
 
+**📝 Status:** ✅ **Selesai pada 19 Desember 2024** (100% - Score: 10/10)
+
 ---
 
 ## 📅 Minggu 3: Arrays & Objects
 
 ### Day 15: Array Basics
 **Materi:**
-- [ ] Membuat array
-- [ ] Akses element (index)
-- [ ] `length` property
+- [x] Membuat array
+- [x] Akses element (index)
+- [x] `length` property
 
 **🔨 Praktik:**
 ```javascript
@@ -720,13 +728,17 @@ for (let item of buah) {
 // Loop dan tampilkan masing-masing
 ```
 
+**📝 Status:** ✅ **Selesai pada 19 Desember 2024** (100% - Score: 13/13)
+
 ---
 
 ### Day 16: Array Methods I
 **Materi:**
-- [ ] `push()`, `pop()`
-- [ ] `shift()`, `unshift()`
-- [ ] `splice()`, `slice()`
+- [x] `push()`, `pop()`
+- [x] `shift()`, `unshift()`
+- [x] `splice()`, `slice()`
+
+**📝 Status:** ✅ **Selesai pada 20 Desember 2024** (100% - Score: 13/13)
 
 **🔨 Praktik:**
 ```javascript
@@ -1187,8 +1199,8 @@ Buat Todo List lengkap dengan:
 | Week | Topics | Status |
 |------|--------|--------|
 | 1 | Fundamentals | ✅ (7/7 days) |
-| 2 | Control Flow & Functions | 🔄 (3/8 days) |
-| 3 | Arrays & Objects | ⬜ |
+| 2 | Control Flow & Functions | ✅ (7/7 days) |
+| 3 | Arrays & Objects | 🔄 (2/7 days) |
 | 4 | DOM & Async | ⬜ |
 
 **Completed Days:**
@@ -1202,6 +1214,12 @@ Buat Todo List lengkap dengan:
 - ✅ Day 8: If/Else Statement
 - ✅ Day 9: Switch Case
 - ✅ Day 10: For Loop
+- ✅ Day 11: While Loop
+- ✅ Day 12: Functions Dasar
+- ✅ Day 13: Function Parameters & Return
+- ✅ Day 14: Mini Project - FizzBuzz
+- ✅ Day 15: Array Basics
+- ✅ Day 16: Array Methods I
 
 ---
 

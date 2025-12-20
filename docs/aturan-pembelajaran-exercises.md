@@ -3,6 +3,7 @@
 ## 🤖 Role AI Assistant (Claude)
 
 ### 1. Melacak Progress
+
 - **Cek terbaru**: Setiap kali diminta membuat soal, cek progress terakhir di `roadmap-30-hari-javascript.md`
 - **Identifikasi hari**: Lihat hari mana yang sudah selesai (ditandai dengan ✅)
 - **Buat soal hari berikutnya**: Buat soal untuk hari yang belum selesai
@@ -10,11 +11,16 @@
 ### 2. Format Soal yang Harus Dibuat
 
 Untuk setiap hari, buat:
+
 - **File latihan**: `exercises/day-[nomor]/[topik].js`
   - Berisi template soal dengan komentar TODO
   - Berisi test case yang bisa dijalankan
 - **File jawaban**: `solutions/day-[nomor]-[topik].js`
   - Berisi solusi lengkap dengan penjelasan
+- **File materi**: `exercises/day-[nomor]/[topik].md`
+  - Berisi penjelasan konsep dan teori materi
+  - Berisi contoh-contoh kode dan penggunaannya
+  - Format menggunakan Markdown (.md)
 
 ### 3. Template Soal
 
@@ -25,11 +31,13 @@ Untuk setiap hari, buat:
 
 // ============================================
 // TODO 1: [Deskripsi tugas]
+// Harapan Output
 // ============================================
 // Tulis kode kamu di bawah ini:
 
 // ============================================
 // TODO 2: [Deskripsi tugas]
+// Harapan Output
 // ============================================
 // Tulis kode kamu di bawah ini:
 
@@ -42,6 +50,7 @@ Untuk setiap hari, buat:
 ### 4. Update Progress di Roadmap
 
 Setiap kali student selesai:
+
 - ✅ Checklist hari yang sudah selesai
 - 📝 Update "Completed Days" list
 - 🔄 Update "Week Status" progress
@@ -50,16 +59,19 @@ Setiap kali student selesai:
 ## 👨‍🎓 Role Student
 
 ### 1. Mengerjakan Soal
+
 - Buka file latihan di `exercises/day-[nomor]/[topik].js`
 - Kerjakan semua TODO yang ada
 - Test manual dengan `node file-name.js`
 
 ### 2. Validasi Jawaban
+
 - Jalankan checker: `node checker.js exercises/day-[nomor]/[topik].js [nomor-hari]`
 - Lihat hasil: ✅ PASSED atau ❌ FAILED
 - Perbaiki jika ada yang FAILED
 
 ### 3. Konfirmasi Selesai
+
 - Setelah semua PASSED, beritahu AI: "Saya sudah selesai Day X"
 - AI akan update progress dan buatkan soal hari berikutnya
 
@@ -86,22 +98,26 @@ Setiap kali student selesai:
 ## 📝 Contoh Implementasi
 
 ### AI membuat soal:
+
 ```
 > "OK, saya lihat kamu sudah selesai Day 5.
 > Saya akan buatkan soal untuk Day 6: String Methods"
 ```
 
 Maka AI akan:
+
 1. Membuat `exercises/day-6/string-methods.js`
 2. Membuat `solutions/day-6-string-methods.js`
 3. Tidak update roadmap (belum ada tanda ✅)
 
 ### Student selesai:
+
 ```
 > "Saya sudah selesai Day 6, checker menunjukkan semua PASSED"
 ```
 
 Maka AI akan:
+
 1. Update `roadmap-30-hari-javascript.md`
 2. Tandai Day 6 dengan ✅
 3. Update progress percentage
@@ -110,12 +126,14 @@ Maka AI akan:
 ## ⚠️ Penting!
 
 ### AI harus ingat:
+
 - Jangan update progress SEBELUM student konfirmasi selesai
 - Selalu cek progress terakhir sebelum membuat soal baru
 - Buat soal yang sesuai dengan kurikulum di roadmap
 - Berikan test case yang jelas dan bisa di-check
 
 ### Student harus ingat:
+
 - Jalankan checker untuk validasi
 - Beri tahu AI jika sudah selesai dengan jelas
 - Jangan lanjut ke hari berikutnya sebelum yang sekarang PASSED semua
@@ -123,9 +141,12 @@ Maka AI akan:
 ## 📊 Tracking Format
 
 Di roadmap akan ada format seperti ini:
+
 ```markdown
 ### Day X: [Topik]
+
 **Materi:**
+
 - [x] Sub-materi 1
 - [x] Sub-materi 2
 - [x] Sub-materi 3

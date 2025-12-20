@@ -865,6 +865,600 @@ function checkDay10(code) {
     return results;
 }
 
+// Function to check Day 11: While Loop exercises
+function checkDay11(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Basic while loop countdown
+    results.total++;
+    if (code.includes('while') && code.includes('i >= 1') || code.includes('i > 0')) {
+        results.passed.push('✓ While loop countdown');
+    } else {
+        results.failed.push('✗ Belum membuat while loop countdown');
+    }
+
+    // Check 2: Simulasi antrian
+    results.total++;
+    if (code.includes('antrian') && code.includes('while')) {
+        results.passed.push('✓ Simulasi antrian dengan while');
+    } else {
+        results.failed.push('✗ Belum membuat simulasi antrian');
+    }
+
+    // Check 3: Login validation
+    results.total++;
+    if (code.includes('percobaan') && code.includes('while') && code.includes('loginBerhasil')) {
+        results.passed.push('✓ Validasi login dengan while');
+    } else {
+        results.failed.push('✗ Belum membuat validasi login');
+    }
+
+    // Check 4: Faktorial
+    results.total++;
+    if (code.includes('faktorial') && code.includes('while') && code.includes('*=')) {
+        results.passed.push('✓ Menghitung faktorial dengan while');
+    } else {
+        results.failed.push('✗ Belum menghitung faktorial');
+    }
+
+    // Check 5: Game tebak angka
+    results.total++;
+    if (code.includes('kesempatan') && code.includes('while') && code.includes('benar')) {
+        results.passed.push('✓ Game tebak angka dengan while');
+    } else {
+        results.failed.push('✗ Belum membuat game tebak angka');
+    }
+
+    // Check 6: Do-while
+    results.total++;
+    if (code.includes('do {') && code.includes('} while')) {
+        results.passed.push('✓ Menggunakan do-while loop');
+    } else {
+        results.failed.push('✗ Belum menggunakan do-while');
+    }
+
+    // Check 7: Break statement
+    results.total++;
+    if (code.includes('break') && code.includes('17')) {
+        results.passed.push('✓ Menggunakan break di kelipatan 17');
+    } else {
+        results.failed.push('✗ Belum menggunakan break dengan benar');
+    }
+
+    // Check 8: Continue statement
+    results.total++;
+    if (code.includes('continue') && code.includes('% 3')) {
+        results.passed.push('✓ Menggunakan continue untuk skip kelipatan 3');
+    } else {
+        results.failed.push('✗ Belum menggunakan continue dengan benar');
+    }
+
+    // Check 9: Nested while loops
+    results.total++;
+    if (code.includes('while') && code.includes('baris') && code.includes('kolom')) {
+        results.passed.push('✓ Nested while loops untuk pola');
+    } else {
+        results.failed.push('✗ Belum membuat nested while loops');
+    }
+
+    // Check 10: Sum of odd numbers
+    results.total++;
+    if (code.includes('ganjil') || (code.includes('% 2 !== 0') && code.includes('while'))) {
+        results.passed.push('✓ Menghitung jumlah angka ganjil');
+    } else {
+        results.failed.push('✗ Belum menghitung angka ganjil');
+    }
+
+    return results;
+}
+
+// Function to check Day 12: Functions Dasar exercises
+function checkDay12(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Function declaration ucapanSalam
+    results.total++;
+    if (code.includes('function ucapanSalam()') || code.includes('function ucapanSalam ()')) {
+        results.passed.push('✓ Function declaration ucapanSalam');
+    } else {
+        results.failed.push('✗ Belum membuat function ucapanSalam');
+    }
+
+    // Check 2: Function dengan parameter sapaNama
+    results.total++;
+    if (code.includes('function sapaNama(nama)') || code.includes('function sapaNama (nama)')) {
+        results.passed.push('✓ Function sapaNama dengan parameter');
+    } else {
+        results.failed.push('✗ Belum membuat function sapaNama');
+    }
+
+    // Check 3: Function dengan return tambah
+    results.total++;
+    if (code.includes('function tambah(a, b)') && code.includes('return a + b')) {
+        results.passed.push('✓ Function tambah dengan return');
+    } else {
+        results.failed.push('✗ Belum membuat function tambah dengan return');
+    }
+
+    // Check 4: Function expression kali
+    results.total++;
+    if (code.includes('const kali = function') && code.includes('return a * b')) {
+        results.passed.push('✓ Function expression kali');
+    } else {
+        results.failed.push('✗ Belum membuat function expression kali');
+    }
+
+    // Check 5: Arrow function kurang
+    results.total++;
+    if (code.includes('const kurang =') && code.includes('=>') && code.includes('a - b')) {
+        results.passed.push('✓ Arrow function kurang');
+    } else {
+        results.failed.push('✗ Belum membuat arrow function kurang');
+    }
+
+    // Check 6: Arrow function shorthand pangkatDua
+    results.total++;
+    if (code.includes('const pangkatDua =') && code.includes('=>') && code.includes('n * n')) {
+        results.passed.push('✓ Arrow function shorthand pangkatDua');
+    } else {
+        results.failed.push('✗ Belum membuat arrow function pangkatDua');
+    }
+
+    // Check 7: Function luasPersegi
+    results.total++;
+    if ((code.includes('function luasPersegi') || code.includes('const luasPersegi')) && code.includes('sisi * sisi')) {
+        results.passed.push('✓ Function luasPersegi');
+    } else {
+        results.failed.push('✗ Belum membuat function luasPersegi');
+    }
+
+    // Check 8: Function luasPersegiPanjang
+    results.total++;
+    if ((code.includes('function luasPersegiPanjang') || code.includes('const luasPersegiPanjang')) && code.includes('panjang * lebar')) {
+        results.passed.push('✓ Function luasPersegiPanjang');
+    } else {
+        results.failed.push('✗ Belum membuat function luasPersegiPanjang');
+    }
+
+    // Check 9: Function kelilingLingkaran
+    results.total++;
+    if ((code.includes('function kelilingLingkaran') || code.includes('const kelilingLingkaran')) && (code.includes('Math.PI') || code.includes('3.14'))) {
+        results.passed.push('✓ Function kelilingLingkaran');
+    } else {
+        results.failed.push('✗ Belum membuat function kelilingLingkaran');
+    }
+
+    // Check 10: Function celsiusToFahrenheit
+    results.total++;
+    if ((code.includes('function celsiusToFahrenheit') || code.includes('const celsiusToFahrenheit')) && code.includes('9/5') || code.includes('9 / 5')) {
+        results.passed.push('✓ Function celsiusToFahrenheit');
+    } else {
+        results.failed.push('✗ Belum membuat function celsiusToFahrenheit');
+    }
+
+    // Check 11: Function isGenap
+    results.total++;
+    if (code.includes('isGenap') && code.includes('=>') && code.includes('% 2')) {
+        results.passed.push('✓ Arrow function isGenap');
+    } else {
+        results.failed.push('✗ Belum membuat arrow function isGenap');
+    }
+
+    // Check 12: Function getMax
+    results.total++;
+    if ((code.includes('function getMax') || code.includes('const getMax')) && (code.includes('a > b') || code.includes('b > a') || code.includes('Math.max'))) {
+        results.passed.push('✓ Function getMax');
+    } else {
+        results.failed.push('✗ Belum membuat function getMax');
+    }
+
+    return results;
+}
+
+// Function to check Day 13: Function Parameters & Return
+function checkDay13(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Function dengan parameter sapaNama
+    results.total++;
+    if (code.includes('function sapaNama') && code.includes('nama')) {
+        results.passed.push('✓ Function sapaNama dengan parameter');
+    } else {
+        results.failed.push('✗ Belum membuat function sapaNama');
+    }
+
+    // Check 2: Function dengan return tambah
+    results.total++;
+    if (code.includes('function tambah') && code.includes('return')) {
+        results.passed.push('✓ Function tambah dengan return');
+    } else {
+        results.failed.push('✗ Belum membuat function tambah dengan return');
+    }
+
+    // Check 3: Function luasPersegi
+    results.total++;
+    if (code.includes('luasPersegi') && code.includes('sisi * sisi')) {
+        results.passed.push('✓ Function luasPersegi');
+    } else {
+        results.failed.push('✗ Belum membuat function luasPersegi');
+    }
+
+    // Check 4: Function luasPersegiPanjang
+    results.total++;
+    if (code.includes('luasPersegiPanjang') && code.includes('panjang') && code.includes('lebar')) {
+        results.passed.push('✓ Function luasPersegiPanjang');
+    } else {
+        results.failed.push('✗ Belum membuat function luasPersegiPanjang');
+    }
+
+    // Check 5: Function kelilingLingkaran
+    results.total++;
+    if (code.includes('kelilingLingkaran') && (code.includes('Math.PI') || code.includes('3.14'))) {
+        results.passed.push('✓ Function kelilingLingkaran');
+    } else {
+        results.failed.push('✗ Belum membuat function kelilingLingkaran');
+    }
+
+    // Check 6: Function celsiusToFahrenheit
+    results.total++;
+    if (code.includes('celsiusToFahrenheit') && (code.includes('9/5') || code.includes('9 / 5') || code.includes('1.8'))) {
+        results.passed.push('✓ Function celsiusToFahrenheit');
+    } else {
+        results.failed.push('✗ Belum membuat function celsiusToFahrenheit');
+    }
+
+    // Check 7: Function isGenap
+    results.total++;
+    if (code.includes('isGenap') && code.includes('% 2')) {
+        results.passed.push('✓ Function isGenap');
+    } else {
+        results.failed.push('✗ Belum membuat function isGenap');
+    }
+
+    // Check 8: Function getMax
+    results.total++;
+    if (code.includes('getMax') && (code.includes('a > b') || code.includes('Math.max'))) {
+        results.passed.push('✓ Function getMax');
+    } else {
+        results.failed.push('✗ Belum membuat function getMax');
+    }
+
+    return results;
+}
+
+// Function to check Day 14: FizzBuzz Mini Project
+function checkDay14(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Basic fizzBuzz function
+    results.total++;
+    if (code.includes('function fizzBuzz') && code.includes('% 15') || (code.includes('% 3') && code.includes('% 5'))) {
+        results.passed.push('✓ Function fizzBuzz basic');
+    } else {
+        results.failed.push('✗ Belum membuat function fizzBuzz');
+    }
+
+    // Check 2: FizzBuzz with Fizz output
+    results.total++;
+    if (code.includes('"Fizz"') || code.includes("'Fizz'") || code.includes('`Fizz`')) {
+        results.passed.push('✓ Output "Fizz" untuk kelipatan 3');
+    } else {
+        results.failed.push('✗ Belum ada output "Fizz"');
+    }
+
+    // Check 3: FizzBuzz with Buzz output
+    results.total++;
+    if (code.includes('"Buzz"') || code.includes("'Buzz'") || code.includes('`Buzz`')) {
+        results.passed.push('✓ Output "Buzz" untuk kelipatan 5');
+    } else {
+        results.failed.push('✗ Belum ada output "Buzz"');
+    }
+
+    // Check 4: FizzBuzz with FizzBuzz output
+    results.total++;
+    if (code.includes('"FizzBuzz"') || code.includes("'FizzBuzz'") || code.includes('`FizzBuzz`')) {
+        results.passed.push('✓ Output "FizzBuzz" untuk kelipatan 15');
+    } else {
+        results.failed.push('✗ Belum ada output "FizzBuzz"');
+    }
+
+    // Check 5: fizzBuzzArray function
+    results.total++;
+    if (code.includes('fizzBuzzArray') && code.includes('return') && code.includes('push')) {
+        results.passed.push('✓ Function fizzBuzzArray dengan return array');
+    } else {
+        results.failed.push('✗ Belum membuat function fizzBuzzArray');
+    }
+
+    // Check 6: fizzBuzzCustom function
+    results.total++;
+    if (code.includes('fizzBuzzCustom') && code.includes('fizzNum') && code.includes('buzzNum')) {
+        results.passed.push('✓ Function fizzBuzzCustom dengan parameter custom');
+    } else {
+        results.failed.push('✗ Belum membuat function fizzBuzzCustom');
+    }
+
+    // Check 7: fizzBuzzStats function
+    results.total++;
+    if (code.includes('fizzBuzzStats') && code.includes('fizz:') && code.includes('buzz:')) {
+        results.passed.push('✓ Function fizzBuzzStats dengan statistics');
+    } else {
+        results.failed.push('✗ Belum membuat function fizzBuzzStats');
+    }
+
+    // Check 8: fizzBuzzRange function
+    results.total++;
+    if (code.includes('fizzBuzzRange') && code.includes('start') && code.includes('end')) {
+        results.passed.push('✓ Function fizzBuzzRange');
+    } else {
+        results.failed.push('✗ Belum membuat function fizzBuzzRange');
+    }
+
+    // Check 9: fizzBuzzReverse function
+    results.total++;
+    if (code.includes('fizzBuzzReverse') && (code.includes('i--') || code.includes('i >= 1') || code.includes('i > 0'))) {
+        results.passed.push('✓ Function fizzBuzzReverse');
+    } else {
+        results.failed.push('✗ Belum membuat function fizzBuzzReverse');
+    }
+
+    // Check 10: Using loop
+    results.total++;
+    if (code.includes('for') || code.includes('while')) {
+        results.passed.push('✓ Menggunakan loop (for/while)');
+    } else {
+        results.failed.push('✗ Belum menggunakan loop');
+    }
+
+    return results;
+}
+
+// Function to check Day 16: Array Methods I
+function checkDay16(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: push() method
+    results.total++;
+    if (code.includes('cart.push(') && code.includes('"Penghapus"')) {
+        results.passed.push('✓ Menggunakan push() untuk menambah item');
+    } else {
+        results.failed.push('✗ Belum menggunakan push() dengan benar');
+    }
+
+    // Check 2: pop() method
+    results.total++;
+    if (code.includes('cart.pop()') && code.includes('lastItem')) {
+        results.passed.push('✓ Menggunakan pop() dan menyimpan hasilnya');
+    } else {
+        results.failed.push('✗ Belum menggunakan pop() dengan benar');
+    }
+
+    // Check 3: shift() method
+    results.total++;
+    if (code.includes('antrian.shift()') && code.includes('dilayani')) {
+        results.passed.push('✓ Menggunakan shift() untuk antrian');
+    } else {
+        results.failed.push('✗ Belum menggunakan shift() dengan benar');
+    }
+
+    // Check 4: unshift() method
+    results.total++;
+    if (code.includes('antrian.unshift(') && code.includes('VIP')) {
+        results.passed.push('✓ Menggunakan unshift() untuk menambah di awal');
+    } else {
+        results.failed.push('✗ Belum menggunakan unshift() dengan benar');
+    }
+
+    // Check 5: splice() untuk menghapus
+    results.total++;
+    if (code.includes('buah.splice(') && code.includes('indexOf')) {
+        results.passed.push('✓ Menggunakan splice() dengan indexOf untuk menghapus');
+    } else {
+        results.failed.push('✗ Belum menggunakan splice() untuk menghapus item');
+    }
+
+    // Check 6: splice() untuk insert
+    results.total++;
+    if (code.includes('angka.splice(') && code.includes(', 0,')) {
+        results.passed.push('✓ Menggunakan splice() untuk insert');
+    } else {
+        results.failed.push('✗ Belum menggunakan splice() untuk insert');
+    }
+
+    // Check 7: slice() method
+    results.total++;
+    if (code.includes('hewan.slice(') && code.includes('sebagianHewan')) {
+        results.passed.push('✓ Menggunakan slice() untuk mengambil sebagian');
+    } else {
+        results.failed.push('✗ Belum menggunakan slice() dengan benar');
+    }
+
+    // Check 8: slice() dengan index negatif
+    results.total++;
+    if (code.includes('slice(-2)') && code.includes('duaTerakhir')) {
+        results.passed.push('✓ Menggunakan slice() dengan index negatif');
+    } else {
+        results.failed.push('✗ Belum menggunakan slice() dengan index negatif');
+    }
+
+    // Check 9: Function removeItem
+    results.total++;
+    if (code.includes('function removeItem') && code.includes('indexOf') && code.includes('splice')) {
+        results.passed.push('✓ Membuat function removeItem');
+    } else {
+        results.failed.push('✗ Belum membuat function removeItem');
+    }
+
+    // Check 10: Function insertAt
+    results.total++;
+    if (code.includes('function insertAt') && code.includes('splice')) {
+        results.passed.push('✓ Membuat function insertAt');
+    } else {
+        results.failed.push('✗ Belum membuat function insertAt');
+    }
+
+    // Check 11: Playlist manager
+    results.total++;
+    if (code.includes('playlist.push(') && code.includes('playlist.unshift(')) {
+        results.passed.push('✓ Playlist manager dengan push dan unshift');
+    } else {
+        results.failed.push('✗ Playlist manager belum lengkap');
+    }
+
+    // Check 12: Stack implementation
+    results.total++;
+    if (code.includes('stack.push(') && code.includes('stack.pop()') && code.includes('poppedItem')) {
+        results.passed.push('✓ Stack implementation (push/pop)');
+    } else {
+        results.failed.push('✗ Stack implementation belum lengkap');
+    }
+
+    // Check 13: Function rotateLeft
+    results.total++;
+    if (code.includes('function rotateLeft') && code.includes('slice') && (code.includes('concat') || code.includes('...'))) {
+        results.passed.push('✓ Membuat function rotateLeft');
+    } else {
+        results.failed.push('✗ Belum membuat function rotateLeft');
+    }
+
+    return results;
+}
+
+// Function to check Day 15: Array Basics
+function checkDay15(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: Membuat array buah
+    results.total++;
+    if ((code.includes('const buah') || code.includes('let buah')) && code.includes('[') && code.includes(']')) {
+        results.passed.push('✓ Membuat array buah');
+    } else {
+        results.failed.push('✗ Belum membuat array buah');
+    }
+
+    // Check 2: Akses element dengan index
+    results.total++;
+    if (code.includes('buah[0]') && code.includes('buah[2]')) {
+        results.passed.push('✓ Akses element dengan index');
+    } else {
+        results.failed.push('✗ Belum akses element dengan index');
+    }
+
+    // Check 3: Akses element terakhir
+    results.total++;
+    if (code.includes('buah[buah.length - 1]') || code.includes('buah[4]')) {
+        results.passed.push('✓ Akses element terakhir');
+    } else {
+        results.failed.push('✗ Belum akses element terakhir');
+    }
+
+    // Check 4: Property length
+    results.total++;
+    if (code.includes('.length')) {
+        results.passed.push('✓ Menggunakan property length');
+    } else {
+        results.failed.push('✗ Belum menggunakan property length');
+    }
+
+    // Check 5: Array angka
+    results.total++;
+    if ((code.includes('const angka') || code.includes('let angka')) && code.includes('[1')) {
+        results.passed.push('✓ Membuat array angka');
+    } else {
+        results.failed.push('✗ Belum membuat array angka');
+    }
+
+    // Check 6: Mengubah element array
+    results.total++;
+    if (code.includes('buah[1] =') || code.includes('buah[0] =') || code.includes('buah[2] =')) {
+        results.passed.push('✓ Mengubah element array');
+    } else {
+        results.failed.push('✗ Belum mengubah element array');
+    }
+
+    // Check 7: for...of loop
+    results.total++;
+    if (code.includes('for') && code.includes('of')) {
+        results.passed.push('✓ Menggunakan for...of loop');
+    } else {
+        results.failed.push('✗ Belum menggunakan for...of loop');
+    }
+
+    // Check 8: forEach method
+    results.total++;
+    if (code.includes('.forEach(')) {
+        results.passed.push('✓ Menggunakan forEach method');
+    } else {
+        results.failed.push('✗ Belum menggunakan forEach method');
+    }
+
+    // Check 9: Array campuran dengan typeof
+    results.total++;
+    if (code.includes('dataSiswa') && code.includes('typeof')) {
+        results.passed.push('✓ Array campuran dengan typeof');
+    } else {
+        results.failed.push('✗ Belum membuat array campuran dengan typeof');
+    }
+
+    // Check 10: indexOf method
+    results.total++;
+    if (code.includes('.indexOf(')) {
+        results.passed.push('✓ Menggunakan indexOf method');
+    } else {
+        results.failed.push('✗ Belum menggunakan indexOf method');
+    }
+
+    // Check 11: includes method
+    results.total++;
+    if (code.includes('.includes(')) {
+        results.passed.push('✓ Menggunakan includes method');
+    } else {
+        results.failed.push('✗ Belum menggunakan includes method');
+    }
+
+    // Check 12: Hitung total dengan loop
+    results.total++;
+    if (code.includes('total') && code.includes('+=') && code.includes('for')) {
+        results.passed.push('✓ Menghitung total dengan loop');
+    } else {
+        results.failed.push('✗ Belum menghitung total dengan loop');
+    }
+
+    // Check 13: Mencari nilai maksimum
+    results.total++;
+    if (code.includes('max') && code.includes('if') && code.includes('>')) {
+        results.passed.push('✓ Mencari nilai maksimum dengan loop');
+    } else {
+        results.failed.push('✗ Belum mencari nilai maksimum');
+    }
+
+    return results;
+}
+
 // Main checker function
 function checkExercise(filePath, day) {
     try {
@@ -905,6 +1499,24 @@ function checkExercise(filePath, day) {
             case 10:
                 results = checkDay10(code);
                 break;
+            case 11:
+                results = checkDay11(code);
+                break;
+            case 12:
+                results = checkDay12(code);
+                break;
+            case 13:
+                results = checkDay13(code);
+                break;
+            case 14:
+                results = checkDay14(code);
+                break;
+            case 15:
+                results = checkDay15(code);
+                break;
+            case 16:
+                results = checkDay16(code);
+                break;
             default:
                 console.log('Day not supported yet');
                 return;
@@ -936,8 +1548,8 @@ function checkExercise(filePath, day) {
 // Check if file path is provided
 if (process.argv.length < 3) {
     console.log('Usage: node checker.js <file-path> [day-number]');
-    console.log('Example: node checker.js variables.js 2');
-    console.log('Supported days: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10');
+    console.log('Example: node checker.js exercises/day-16/array-methods-1.js 16');
+    console.log('Supported days: 1-16');
     process.exit(1);
 }
 
