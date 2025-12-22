@@ -762,8 +762,10 @@ console.log(antrian);
 
 ### Day 17: Array Iteration
 **Materi:**
-- [ ] `forEach()` - loop array
-- [ ] `map()` - transformasi array
+- [x] `forEach()` - loop array
+- [x] `map()` - transformasi array
+
+**📝 Status:** ✅ **Selesai pada 22 Desember 2024** (100% - Score: 13/13)
 
 **🔨 Praktik:**
 ```javascript
@@ -1200,7 +1202,7 @@ Buat Todo List lengkap dengan:
 |------|--------|--------|
 | 1 | Fundamentals | ✅ (7/7 days) |
 | 2 | Control Flow & Functions | ✅ (7/7 days) |
-| 3 | Arrays & Objects | 🔄 (2/7 days) |
+| 3 | Arrays & Objects | 🔄 (3/7 days) |
 | 4 | DOM & Async | ⬜ |
 
 **Completed Days:**
@@ -1220,6 +1222,7 @@ Buat Todo List lengkap dengan:
 - ✅ Day 14: Mini Project - FizzBuzz
 - ✅ Day 15: Array Basics
 - ✅ Day 16: Array Methods I
+- ✅ Day 17: Array Iteration
 
 ---
 
