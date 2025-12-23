@@ -1,7 +1,18 @@
-let sentenceHidden = "Capture Every Letter's True Essence";
-let wordsHidden = sentenceHidden[1].split();
-let hidden = wordsHidden.map(word => word[1].slice('')).join('');
+let users = [
+    { name: "Budi", age: 25 },
+    { name: "Ani", age: 30 },
+    { name: "Citra", age: 28 }
+];
 
-console.log("\n14. Hidden message:");
-console.log("Sentence:", sentenceHidden);
-console.log("Hidden message:", hidden); // Expected: "aptureet"
+
+let nama = []
+
+console.log(nama)
+
+let namaUser = users.map(user => user.name)
+
+namaUser.forEach(user => {
+    nama.push(user)
+});
+
+console.log(nama)

@@ -1229,6 +1229,420 @@ function checkDay14(code) {
     return results;
 }
 
+// Function to check Day 17: Array Iteration
+function checkDay17(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // Check 1: forEach basic
+    results.total++;
+    if (code.includes('.forEach(') && code.includes('console.log')) {
+        results.passed.push('✓ Menggunakan forEach untuk loop');
+    } else {
+        results.failed.push('✗ Belum menggunakan forEach');
+    }
+
+    // Check 2: forEach dengan index
+    results.total++;
+    if (code.includes('.forEach((') && code.includes('index')) {
+        results.passed.push('✓ forEach dengan index parameter');
+    } else {
+        results.failed.push('✗ Belum menggunakan forEach dengan index');
+    }
+
+    // Check 3: map untuk transformasi
+    results.total++;
+    if (code.includes('.map(') && code.includes('* 2')) {
+        results.passed.push('✓ Menggunakan map untuk double');
+    } else {
+        results.failed.push('✗ Belum menggunakan map untuk double');
+    }
+
+    // Check 4: map untuk kuadrat
+    results.total++;
+    if (code.includes('.map(') && (code.includes('* n') || code.includes('n * n') || code.includes('** 2'))) {
+        results.passed.push('✓ Menggunakan map untuk kuadrat');
+    } else {
+        results.failed.push('✗ Belum menggunakan map untuk kuadrat');
+    }
+
+    // Check 5: map untuk capitalize
+    results.total++;
+    if (code.includes('.map(') && code.includes('toUpperCase')) {
+        results.passed.push('✓ Menggunakan map untuk capitalize');
+    } else {
+        results.failed.push('✗ Belum menggunakan map untuk capitalize');
+    }
+
+    // Check 6: map untuk format harga
+    results.total++;
+    if (code.includes('.map(') && (code.includes('Rp') || code.includes('toLocaleString'))) {
+        results.passed.push('✓ Menggunakan map untuk format harga');
+    } else {
+        results.failed.push('✗ Belum menggunakan map untuk format harga');
+    }
+
+    // Check 7: forEach untuk menghitung total
+    results.total++;
+    if (code.includes('.forEach(') && code.includes('total +=')) {
+        results.passed.push('✓ Menggunakan forEach untuk total');
+    } else {
+        results.failed.push('✗ Belum menggunakan forEach untuk total');
+    }
+
+    // Check 8: map untuk extract property
+    results.total++;
+    if (code.includes('.map(') && code.includes('.nama')) {
+        results.passed.push('✓ Menggunakan map untuk extract property');
+    } else {
+        results.failed.push('✗ Belum menggunakan map untuk extract property');
+    }
+
+    // Check 9: map untuk transform object
+    results.total++;
+    if (code.includes('.map(') && code.includes('return {')) {
+        results.passed.push('✓ Menggunakan map untuk transform object');
+    } else {
+        results.failed.push('✗ Belum menggunakan map untuk transform object');
+    }
+
+    // Check 10: forEach dengan kondisi
+    results.total++;
+    if (code.includes('.forEach(') && code.includes('if (')) {
+        results.passed.push('✓ Menggunakan forEach dengan kondisi');
+    } else {
+        results.failed.push('✗ Belum menggunakan forEach dengan kondisi');
+    }
+
+    // Check 11: map chaining
+    results.total++;
+    if (code.includes('.map(') && code.includes(').map(')) {
+        results.passed.push('✓ Method chaining dengan map');
+    } else {
+        results.failed.push('✗ Belum menggunakan method chaining');
+    }
+
+    // Check 12: Arrow function dalam map/forEach
+    results.total++;
+    if (code.includes('=>')) {
+        results.passed.push('✓ Menggunakan arrow function');
+    } else {
+        results.failed.push('✗ Belum menggunakan arrow function');
+    }
+
+    // Check 13: map dengan template literal
+    results.total++;
+    if (code.includes('.map(') && code.includes('`')) {
+        results.passed.push('✓ Menggunakan template literal dalam map');
+    } else {
+        results.failed.push('✗ Belum menggunakan template literal dalam map');
+    }
+
+    return results;
+}
+
+// Function to check Day 18: Array Methods II
+function checkDay18(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // === BAGIAN 1: filter() ===
+    // Check 1.1: Filter nilai lulus
+    results.total++;
+    if (code.includes('nilaiLulus') && code.includes('.filter(') && code.includes('>= 60')) {
+        results.passed.push('✓ 1.1 Filter nilai lulus (>= 60)');
+    } else {
+        results.failed.push('✗ 1.1 Belum filter nilai lulus dengan benar');
+    }
+
+    // Check 1.2: Filter angka ganjil
+    results.total++;
+    if (code.includes('ganjil') && code.includes('.filter(') && code.includes('% 2')) {
+        results.passed.push('✓ 1.2 Filter angka ganjil');
+    } else {
+        results.failed.push('✗ 1.2 Belum filter angka ganjil');
+    }
+
+    // Check 1.3: Filter produk murah
+    results.total++;
+    if (code.includes('produkMurah') && code.includes('.filter(') && code.includes('harga') && code.includes('<= 100000')) {
+        results.passed.push('✓ 1.3 Filter produk murah');
+    } else {
+        results.failed.push('✗ 1.3 Belum filter produk murah');
+    }
+
+    // Check 1.4: Filter user aktif
+    results.total++;
+    if (code.includes('activeUsers') && code.includes('.filter(') && code.includes('status') && code.includes('active')) {
+        results.passed.push('✓ 1.4 Filter user aktif');
+    } else {
+        results.failed.push('✗ 1.4 Belum filter user aktif');
+    }
+
+    // === BAGIAN 2: find() ===
+    // Check 2.1: Find pertama > 50
+    results.total++;
+    if (code.includes('pertamaLebihDari50') && code.includes('.find(') && code.includes('> 50')) {
+        results.passed.push('✓ 2.1 Find angka pertama > 50');
+    } else {
+        results.failed.push('✗ 2.1 Belum find angka > 50');
+    }
+
+    // Check 2.2: Find user by ID
+    results.total++;
+    if (code.includes('userDenganId3') && code.includes('.find(') && code.includes('id') && code.includes('3')) {
+        results.passed.push('✓ 2.2 Find user dengan ID 3');
+    } else {
+        results.failed.push('✗ 2.2 Belum find user dengan ID');
+    }
+
+    // Check 2.3: Find produk by nama
+    results.total++;
+    if (code.includes('wortel') && code.includes('.find(') && code.includes('Wortel')) {
+        results.passed.push('✓ 2.3 Find produk Wortel');
+    } else {
+        results.failed.push('✗ 2.3 Belum find produk Wortel');
+    }
+
+    // Check 2.4: Find yang tidak ada
+    results.total++;
+    if (code.includes('userTidakAda') && code.includes('.find(') && code.includes('99')) {
+        results.passed.push('✓ 2.4 Find user yang tidak ada (ID 99)');
+    } else {
+        results.failed.push('✗ 2.4 Belum find user ID 99');
+    }
+
+    // === BAGIAN 3: reduce() ===
+    // Check 3.1: Reduce total angka
+    results.total++;
+    if (code.includes('totalAngka') && code.includes('.reduce(')) {
+        results.passed.push('✓ 3.1 Reduce total angka');
+    } else {
+        results.failed.push('✗ 3.1 Belum reduce total angka');
+    }
+
+    // Check 3.2: Reduce total belanja
+    results.total++;
+    if (code.includes('totalBelanja') && code.includes('.reduce(') && code.includes('harga') && code.includes('jumlah')) {
+        results.passed.push('✓ 3.2 Reduce total belanja');
+    } else {
+        results.failed.push('✗ 3.2 Belum reduce total belanja');
+    }
+
+    // Check 3.3: Reduce nilai max
+    results.total++;
+    if (code.includes('nilaiMax') && code.includes('.reduce(') && code.includes('>')) {
+        results.passed.push('✓ 3.3 Reduce nilai maximum');
+    } else {
+        results.failed.push('✗ 3.3 Belum reduce nilai max');
+    }
+
+    // Check 3.4: Reduce nilai min
+    results.total++;
+    if (code.includes('nilaiMin') && code.includes('.reduce(') && code.includes('<')) {
+        results.passed.push('✓ 3.4 Reduce nilai minimum');
+    } else {
+        results.failed.push('✗ 3.4 Belum reduce nilai min');
+    }
+
+    // Check 3.5: Reduce rata-rata
+    results.total++;
+    if (code.includes('rataRata') && code.includes('.reduce(') && code.includes('.length')) {
+        results.passed.push('✓ 3.5 Reduce rata-rata');
+    } else {
+        results.failed.push('✗ 3.5 Belum reduce rata-rata');
+    }
+
+    // Check 3.6: Reduce frekuensi kata
+    results.total++;
+    if (code.includes('frekuensi') && code.includes('.reduce(') && code.includes('{}')) {
+        results.passed.push('✓ 3.6 Reduce frekuensi kata');
+    } else {
+        results.failed.push('✗ 3.6 Belum reduce frekuensi kata');
+    }
+
+    // === BAGIAN 4: some() ===
+    // Check 4.1: Some nilai lulus
+    results.total++;
+    if (code.includes('adaYangLulus') && code.includes('.some(') && code.includes('>= 60')) {
+        results.passed.push('✓ 4.1 Some ada yang lulus');
+    } else {
+        results.failed.push('✗ 4.1 Belum cek some ada yang lulus');
+    }
+
+    // Check 4.2: Some stok habis
+    results.total++;
+    if (code.includes('adaStokHabis') && code.includes('.some(') && code.includes('stok') && (code.includes('=== 0') || code.includes('== 0'))) {
+        results.passed.push('✓ 4.2 Some ada stok habis');
+    } else {
+        results.failed.push('✗ 4.2 Belum cek some stok habis (gunakan .stok === 0)');
+    }
+
+    // Check 4.3: Some ada admin
+    results.total++;
+    if (code.includes('adaAdmin') && code.includes('.some(') && code.includes('admin')) {
+        results.passed.push('✓ 4.3 Some ada admin');
+    } else {
+        results.failed.push('✗ 4.3 Belum cek some ada admin');
+    }
+
+    // Check 4.4: Some input kosong
+    results.total++;
+    if (code.includes('adaInputKosong') && code.includes('.some(') && code.includes('""') || code.includes("''")) {
+        results.passed.push('✓ 4.4 Some ada input kosong');
+    } else {
+        results.failed.push('✗ 4.4 Belum cek some input kosong');
+    }
+
+    // === BAGIAN 5: every() ===
+    // Check 5.1: Every semua lulus
+    results.total++;
+    if (code.includes('semuaLulus') && code.includes('.every(') && code.includes('>= 60')) {
+        results.passed.push('✓ 5.1 Every semua lulus');
+    } else {
+        results.failed.push('✗ 5.1 Belum cek every semua lulus');
+    }
+
+    // Check 5.2: Every semua positif
+    results.total++;
+    if (code.includes('semuaPositif') && code.includes('.every(') && code.includes('> 0')) {
+        results.passed.push('✓ 5.2 Every semua positif');
+    } else {
+        results.failed.push('✗ 5.2 Belum cek every positif (gunakan > 0)');
+    }
+
+    // Check 5.3: Every semua tersedia
+    results.total++;
+    if (code.includes('semuaTersedia') && code.includes('.every(') && code.includes('tersedia')) {
+        results.passed.push('✓ 5.3 Every semua tersedia');
+    } else {
+        results.failed.push('✗ 5.3 Belum cek every tersedia');
+    }
+
+    // Check 5.4: Every email valid
+    results.total++;
+    if (code.includes('semuaEmailValid') && code.includes('.every(') && code.includes('includes') && code.includes('@')) {
+        results.passed.push('✓ 5.4 Every email valid');
+    } else {
+        results.failed.push('✗ 5.4 Belum cek every email valid (gunakan .every dan .includes("@"))');
+    }
+
+    // === BAGIAN 6: Method Chaining ===
+    // Check 6.1: Filter + reduce
+    results.total++;
+    if (code.includes('totalElektronik') && code.includes('.filter(') && code.includes('.reduce(') && code.includes('elektronik')) {
+        results.passed.push('✓ 6.1 Filter + reduce untuk total elektronik');
+    } else {
+        results.failed.push('✗ 6.1 Belum chain filter + reduce');
+    }
+
+    // Check 6.2: Filter + map + join
+    results.total++;
+    if (code.includes('namaLulus') && code.includes('.filter(') && code.includes('.map(') && code.includes('.join(')) {
+        results.passed.push('✓ 6.2 Filter + map + join untuk nama lulus');
+    } else {
+        results.failed.push('✗ 6.2 Belum chain filter + map + join');
+    }
+
+    // Check 6.3: Every + reduce
+    results.total++;
+    if (code.includes('semuaPesananValid') && code.includes('.every(') && code.includes('totalPesanan')) {
+        results.passed.push('✓ 6.3 Every + conditional reduce');
+    } else {
+        results.failed.push('✗ 6.3 Belum cek every dan hitung total');
+    }
+
+    // === BAGIAN 7: Challenge ===
+    // Check 7.1: Find produk ID 5
+    results.total++;
+    if (code.includes('produkId5') && code.includes('.find(') && code.includes('5')) {
+        results.passed.push('✓ 7.1 Find produk ID 5');
+    } else {
+        results.failed.push('✗ 7.1 Belum find produk ID 5');
+    }
+
+    // Check 7.2: Filter produk tersedia
+    results.total++;
+    if (code.includes('produkTersedia') && code.includes('.filter(') && code.includes('stok') && code.includes('> 0')) {
+        results.passed.push('✓ 7.2 Filter produk tersedia');
+    } else {
+        results.failed.push('✗ 7.2 Belum filter produk tersedia');
+    }
+
+    // Check 7.3: Reduce nilai inventory
+    results.total++;
+    if (code.includes('nilaiInventory') && code.includes('.reduce(') && code.includes('harga') && code.includes('stok')) {
+        results.passed.push('✓ 7.3 Reduce nilai inventory');
+    } else {
+        results.failed.push('✗ 7.3 Belum reduce nilai inventory');
+    }
+
+    // Check 7.4: Some rating bagus
+    results.total++;
+    if (code.includes('adaProdukBagus') && code.includes('.some(') && code.includes('rating') && code.includes('>= 4.5')) {
+        results.passed.push('✓ 7.4 Some produk rating >= 4.5');
+    } else {
+        results.failed.push('✗ 7.4 Belum cek some rating bagus');
+    }
+
+    // Check 7.5: Every ada stok
+    results.total++;
+    if (code.includes('semuaAdaStok') && code.includes('.every(') && code.includes('stok') && code.includes('> 0')) {
+        results.passed.push('✓ 7.5 Every semua ada stok');
+    } else {
+        results.failed.push('✗ 7.5 Belum cek every ada stok');
+    }
+
+    // Check 7.6: Filter + sort
+    results.total++;
+    if (code.includes('elektronikTersedia') && code.includes('.filter(') && code.includes('.sort(')) {
+        results.passed.push('✓ 7.6 Filter elektronik + sort by rating');
+    } else {
+        results.failed.push('✗ 7.6 Belum filter + sort elektronik');
+    }
+
+    // Check 7.7: Rata-rata rating
+    results.total++;
+    if (code.includes('rataRataRating') && code.includes('.reduce(') && code.includes('rating')) {
+        results.passed.push('✓ 7.7 Rata-rata rating');
+    } else {
+        results.failed.push('✗ 7.7 Belum hitung rata-rata rating');
+    }
+
+    // Check 7.8: Ringkasan kategori
+    results.total++;
+    if (code.includes('ringkasanKategori') && code.includes('.reduce(') && code.includes('kategori')) {
+        results.passed.push('✓ 7.8 Ringkasan per kategori');
+    } else {
+        results.failed.push('✗ 7.8 Belum buat ringkasan kategori');
+    }
+
+    // === BONUS ===
+    // Check Bonus 1: findIndex
+    results.total++;
+    if (code.includes('indexMangga') && (code.includes('.findIndex(') || code.includes('.indexOf('))) {
+        results.passed.push('✓ Bonus 1: findIndex/indexOf untuk Mangga');
+    } else {
+        results.failed.push('✗ Bonus 1: Belum cari index Mangga');
+    }
+
+    // Check Bonus 2: includes
+    results.total++;
+    if (code.includes('adaJeruk') && code.includes('.includes(') && code.includes('Jeruk')) {
+        results.passed.push('✓ Bonus 2: includes untuk cek Jeruk');
+    } else {
+        results.failed.push('✗ Bonus 2: Belum cek includes Jeruk');
+    }
+
+    return results;
+}
+
 // Function to check Day 16: Array Methods I
 function checkDay16(code) {
     const results = {
@@ -1516,6 +1930,12 @@ function checkExercise(filePath, day) {
                 break;
             case 16:
                 results = checkDay16(code);
+                break;
+            case 17:
+                results = checkDay17(code);
+                break;
+            case 18:
+                results = checkDay18(code);
                 break;
             default:
                 console.log('Day not supported yet');

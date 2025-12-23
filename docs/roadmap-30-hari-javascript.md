@@ -789,9 +789,11 @@ console.log(doubled); // [2, 4, 6, 8, 10]
 
 ### Day 18: Array Methods II
 **Materi:**
-- [ ] `filter()`, `find()`
-- [ ] `reduce()`
-- [ ] `some()`, `every()`
+- [x] `filter()`, `find()`
+- [x] `reduce()`
+- [x] `some()`, `every()`
+
+**📝 Status:** ✅ **Selesai pada 23 Desember 2024** (100% - Score: 35/35)
 
 **🔨 Praktik:**
 ```javascript
@@ -1202,7 +1204,7 @@ Buat Todo List lengkap dengan:
 |------|--------|--------|
 | 1 | Fundamentals | ✅ (7/7 days) |
 | 2 | Control Flow & Functions | ✅ (7/7 days) |
-| 3 | Arrays & Objects | 🔄 (3/7 days) |
+| 3 | Arrays & Objects | 🔄 (4/7 days) |
 | 4 | DOM & Async | ⬜ |
 
 **Completed Days:**
@@ -1223,6 +1225,7 @@ Buat Todo List lengkap dengan:
 - ✅ Day 15: Array Basics
 - ✅ Day 16: Array Methods I
 - ✅ Day 17: Array Iteration
+- ✅ Day 18: Array Methods II
 
 ---
 
