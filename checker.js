@@ -1643,6 +1643,270 @@ function checkDay18(code) {
     return results;
 }
 
+// Function to check Day 19: Object Basics
+function checkDay19(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // === BAGIAN 1: Membuat Object ===
+    // Check 1.1: Object mobil
+    results.total++;
+    if (code.includes('let mobil') && code.includes('merk') && code.includes('model') && code.includes('tahun')) {
+        results.passed.push('✓ 1.1 Membuat object mobil dengan merk, model, tahun');
+    } else {
+        results.failed.push('✗ 1.1 Belum membuat object mobil lengkap');
+    }
+
+    // Check 1.2: Object siswa
+    results.total++;
+    if (code.includes('let siswa') && code.includes('nama') && code.includes('umur') && code.includes('aktif') && code.includes('hobi')) {
+        results.passed.push('✓ 1.2 Membuat object siswa dengan berbagai tipe data');
+    } else {
+        results.failed.push('✗ 1.2 Belum membuat object siswa lengkap');
+    }
+
+    // Check 1.3: Object buku dengan tambah property
+    results.total++;
+    if (code.includes('let buku = {}') && code.includes('buku.judul') && code.includes('buku.penulis')) {
+        results.passed.push('✓ 1.3 Membuat object kosong dan menambah property');
+    } else {
+        results.failed.push('✗ 1.3 Belum membuat object buku dengan benar');
+    }
+
+    // === BAGIAN 2: Dot Notation ===
+    // Check 2.1-2.4: Akses dengan dot notation
+    results.total++;
+    if (code.includes('merkHP') && code.includes('smartphone.merk')) {
+        results.passed.push('✓ 2.1 Akses property dengan dot notation');
+    } else {
+        results.failed.push('✗ 2.1 Belum akses merk dengan dot notation');
+    }
+
+    results.total++;
+    if (code.includes('hargaHP') && code.includes('smartphone.harga')) {
+        results.passed.push('✓ 2.2 Akses property number');
+    } else {
+        results.failed.push('✗ 2.2 Belum akses harga');
+    }
+
+    results.total++;
+    if (code.includes('ramHP') && code.includes('smartphone.spesifikasi.ram')) {
+        results.passed.push('✓ 2.3 Akses nested object (ram)');
+    } else {
+        results.failed.push('✗ 2.3 Belum akses nested property ram');
+    }
+
+    results.total++;
+    if (code.includes('storageHP') && code.includes('smartphone.spesifikasi.storage')) {
+        results.passed.push('✓ 2.4 Akses nested object (storage)');
+    } else {
+        results.failed.push('✗ 2.4 Belum akses nested property storage');
+    }
+
+    // === BAGIAN 3: Bracket Notation ===
+    results.total++;
+    if (code.includes('namaProduk') && code.includes('produk["nama produk"]')) {
+        results.passed.push('✓ 3.1 Akses property dengan spasi menggunakan bracket');
+    } else {
+        results.failed.push('✗ 3.1 Belum akses property dengan bracket notation');
+    }
+
+    results.total++;
+    if (code.includes('hargaProduk') && code.includes('produk[keyHarga]')) {
+        results.passed.push('✓ 3.2 Akses property dengan variabel');
+    } else {
+        results.failed.push('✗ 3.2 Belum akses property dengan variabel');
+    }
+
+    results.total++;
+    if (code.includes('for') && code.includes('in') && code.includes('user')) {
+        results.passed.push('✓ 3.3 Loop object dengan for...in');
+    } else {
+        results.failed.push('✗ 3.3 Belum loop object dengan for...in');
+    }
+
+    // === BAGIAN 4: Menambah dan Mengubah ===
+    results.total++;
+    if (code.includes('karyawan.gaji') && code.includes('8000000')) {
+        results.passed.push('✓ 4.1 Menambah property gaji');
+    } else {
+        results.failed.push('✗ 4.1 Belum menambah property gaji');
+    }
+
+    results.total++;
+    if (code.includes('karyawan["tahun bergabung"]') && code.includes('2022')) {
+        results.passed.push('✓ 4.2 Menambah property dengan bracket notation');
+    } else {
+        results.failed.push('✗ 4.2 Belum menambah property tahun bergabung');
+    }
+
+    results.total++;
+    if (code.includes('karyawan.posisi') && code.includes('Senior Developer') && code.includes('12000000')) {
+        results.passed.push('✓ 4.3 Mengubah property yang ada');
+    } else {
+        results.failed.push('✗ 4.3 Belum mengubah posisi dan gaji');
+    }
+
+    // === BAGIAN 5: Menghapus ===
+    results.total++;
+    if (code.includes('delete dataUser.password')) {
+        results.passed.push('✓ 5.1 Menghapus property password');
+    } else {
+        results.failed.push('✗ 5.1 Belum menghapus password');
+    }
+
+    results.total++;
+    if (code.includes('delete dataUser.id') && code.includes('delete dataUser.role')) {
+        results.passed.push('✓ 5.2 Menghapus multiple properties');
+    } else {
+        results.failed.push('✗ 5.2 Belum menghapus id dan role');
+    }
+
+    // === BAGIAN 6: Mengecek Keberadaan ===
+    results.total++;
+    if (code.includes('adaTheme') && code.includes('"theme" in config')) {
+        results.passed.push('✓ 6.1 Cek property dengan operator in');
+    } else {
+        results.failed.push('✗ 6.1 Belum cek dengan operator in');
+    }
+
+    results.total++;
+    if (code.includes('punyaLanguage') && code.includes('hasOwnProperty')) {
+        results.passed.push('✓ 6.2 Cek property dengan hasOwnProperty');
+    } else {
+        results.failed.push('✗ 6.2 Belum cek dengan hasOwnProperty');
+    }
+
+    // === BAGIAN 7: Object Methods ===
+    results.total++;
+    if (code.includes('keysMahasiswa') && code.includes('Object.keys(')) {
+        results.passed.push('✓ 7.1 Menggunakan Object.keys()');
+    } else {
+        results.failed.push('✗ 7.1 Belum menggunakan Object.keys()');
+    }
+
+    results.total++;
+    if (code.includes('valuesMahasiswa') && code.includes('Object.values(')) {
+        results.passed.push('✓ 7.2 Menggunakan Object.values()');
+    } else {
+        results.failed.push('✗ 7.2 Belum menggunakan Object.values()');
+    }
+
+    results.total++;
+    if (code.includes('entriesMahasiswa') && code.includes('Object.entries(')) {
+        results.passed.push('✓ 7.3 Menggunakan Object.entries()');
+    } else {
+        results.failed.push('✗ 7.3 Belum menggunakan Object.entries()');
+    }
+
+    results.total++;
+    if (code.includes('jumlahProperty') && code.includes('.length')) {
+        results.passed.push('✓ 7.4 Menghitung jumlah property');
+    } else {
+        results.failed.push('✗ 7.4 Belum menghitung jumlah property');
+    }
+
+    // === BAGIAN 8: Copy dan Merge ===
+    results.total++;
+    if (code.includes('copySpread') && code.includes('...original')) {
+        results.passed.push('✓ 8.1 Copy object dengan spread operator');
+    } else {
+        results.failed.push('✗ 8.1 Belum copy dengan spread operator');
+    }
+
+    results.total++;
+    if (code.includes('copyAssign') && code.includes('Object.assign(')) {
+        results.passed.push('✓ 8.2 Copy object dengan Object.assign');
+    } else {
+        results.failed.push('✗ 8.2 Belum copy dengan Object.assign');
+    }
+
+    results.total++;
+    if (code.includes('mergedSettings') && code.includes('...defaults') && code.includes('...userSettings')) {
+        results.passed.push('✓ 8.3 Merge objects dengan spread');
+    } else {
+        results.failed.push('✗ 8.3 Belum merge objects');
+    }
+
+    // === BAGIAN 9: Nested Objects ===
+    results.total++;
+    if (code.includes('kotaPerusahaan') && code.includes('perusahaan.alamat.kota')) {
+        results.passed.push('✓ 9.1 Akses nested property (kota)');
+    } else {
+        results.failed.push('✗ 9.1 Belum akses kota perusahaan');
+    }
+
+    results.total++;
+    if (code.includes('jumlahEngineering') && code.includes('perusahaan.karyawan.departemen.engineering')) {
+        results.passed.push('✓ 9.2 Akses deep nested property');
+    } else {
+        results.failed.push('✗ 9.2 Belum akses jumlah engineering');
+    }
+
+    results.total++;
+    if (code.includes('perusahaan.karyawan.departemen.engineering') && code.includes('250')) {
+        results.passed.push('✓ 9.3 Ubah nested property');
+    } else {
+        results.failed.push('✗ 9.3 Belum ubah jumlah engineering');
+    }
+
+    results.total++;
+    if (code.includes('perusahaan.karyawan.departemen.finance') && code.includes('75')) {
+        results.passed.push('✓ 9.4 Tambah nested property baru');
+    } else {
+        results.failed.push('✗ 9.4 Belum tambah departemen finance');
+    }
+
+    // === BAGIAN 10: Challenge ===
+    results.total++;
+    if (code.includes('mahasiswaLengkap') && code.includes('nim') && code.includes('biodata') && code.includes('akademik') && code.includes('mataKuliah')) {
+        results.passed.push('✓ 10.1 Membuat object mahasiswa lengkap');
+    } else {
+        results.failed.push('✗ 10.1 Belum membuat object mahasiswa lengkap');
+    }
+
+    results.total++;
+    if (code.includes('function tampilkanBiodata') && code.includes('return')) {
+        results.passed.push('✓ 10.2 Function tampilkanBiodata');
+    } else {
+        results.failed.push('✗ 10.2 Belum membuat function tampilkanBiodata');
+    }
+
+    results.total++;
+    if (code.includes('function hitungTotalSKS') && code.includes('reduce')) {
+        results.passed.push('✓ 10.3 Function hitungTotalSKS dengan reduce');
+    } else {
+        results.failed.push('✗ 10.3 Belum membuat function hitungTotalSKS');
+    }
+
+    results.total++;
+    if (code.includes('function updateIPK') && code.includes('akademik.ipk')) {
+        results.passed.push('✓ 10.4 Function updateIPK');
+    } else {
+        results.failed.push('✗ 10.4 Belum membuat function updateIPK');
+    }
+
+    results.total++;
+    if (code.includes('function tambahMataKuliah') && code.includes('push')) {
+        results.passed.push('✓ 10.5 Function tambahMataKuliah');
+    } else {
+        results.failed.push('✗ 10.5 Belum membuat function tambahMataKuliah');
+    }
+
+    // === BONUS ===
+    results.total++;
+    if (code.includes('let {') && code.includes('title') && code.includes('platform') && code.includes('} = game')) {
+        results.passed.push('✓ Bonus 1: Object destructuring');
+    } else {
+        results.failed.push('✗ Bonus 1: Belum destructuring object');
+    }
+
+    return results;
+}
+
 // Function to check Day 16: Array Methods I
 function checkDay16(code) {
     const results = {
@@ -1936,6 +2200,9 @@ function checkExercise(filePath, day) {
                 break;
             case 18:
                 results = checkDay18(code);
+                break;
+            case 19:
+                results = checkDay19(code);
                 break;
             default:
                 console.log('Day not supported yet');
