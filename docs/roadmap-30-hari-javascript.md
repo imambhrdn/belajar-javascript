@@ -822,9 +822,9 @@ console.log(total);
 
 ### Day 19: Object Basics
 **Materi:**
-- [ ] Object literal `{}`
-- [ ] Properties dan values
-- [ ] Dot vs bracket notation
+- [x] Object literal `{}`
+- [x] Properties dan values
+- [x] Dot vs bracket notation
 
 **🔨 Praktik:**
 ```javascript
@@ -848,6 +848,8 @@ for (let key in mobil) {
 // - Smartphone (merk, harga, spek)
 // - Buku favorit (judul, penulis, tahun, genre)
 ```
+
+**📝 Status:** ✅ **Selesai pada 26 Desember 2024** (100% - Score: 34/34)
 
 ---
 
@@ -1204,7 +1206,7 @@ Buat Todo List lengkap dengan:
 |------|--------|--------|
 | 1 | Fundamentals | ✅ (7/7 days) |
 | 2 | Control Flow & Functions | ✅ (7/7 days) |
-| 3 | Arrays & Objects | 🔄 (4/7 days) |
+| 3 | Arrays & Objects | 🔄 (5/7 days) |
 | 4 | DOM & Async | ⬜ |
 
 **Completed Days:**
@@ -1226,6 +1228,7 @@ Buat Todo List lengkap dengan:
 - ✅ Day 16: Array Methods I
 - ✅ Day 17: Array Iteration
 - ✅ Day 18: Array Methods II
+- ✅ Day 19: Object Basics
 
 ---
 

@@ -463,8 +463,8 @@ console.log("10.3 Total SKS:", hitungTotalSKS(mahasiswaLengkap));
 function updateIPK(mhs, ipkBaru) {
     // Update ipk di akademik
     // mhs.akademik.ipk = ipkBaru;
+    mhs.akademik.ipk = ipkBaru;
 }
-
 updateIPK(mahasiswaLengkap, 3.85);
 console.log("10.4 IPK Updated:", mahasiswaLengkap.akademik.ipk);
 // Expected: 3.85
@@ -475,6 +475,7 @@ console.log("10.4 IPK Updated:", mahasiswaLengkap.akademik.ipk);
 function tambahMataKuliah(mhs, mk) {
     // Tambah mata kuliah ke array mataKuliah menggunakan push
     // mhs.mataKuliah.push(mk);
+    mhs.mataKuliah.push(mk);
 }
 
 tambahMataKuliah(mahasiswaLengkap, { kode: "IF999", nama: "AI", sks: 3, nilai: "A" });
@@ -496,23 +497,23 @@ let game = {
 // TODO: Destructure title dan platform dari game
 // Uncomment baris di bawah dan lengkapi
 // let { title, platform } = game;
-
-// console.log("Bonus 1 - Title:", title);
-// console.log("Bonus 1 - Platform:", platform);
+let { title, platform } = game;
+console.log("Bonus 1 - Title:", title);
+console.log("Bonus 1 - Platform:", platform);
 
 
 // Bonus 2: Destructuring dengan Rename
 // TODO: Destructure year sebagai tahunRilis
 // let { year: tahunRilis } = game;
-
-// console.log("Bonus 2 - Tahun Rilis:", tahunRilis);
+let { year: tahunRilis } = game;
+console.log("Bonus 2 - Tahun Rilis:", tahunRilis);
 
 
 // Bonus 3: Destructuring dengan Default Value
 // TODO: Destructure genre dengan default value "Action"
 // let { genre = "Action" } = game;
-
-// console.log("Bonus 3 - Genre:", genre);
+let { genre = 'Action' } = game;
+console.log("Bonus 3 - Genre:", genre);
 
 
 // ============================================
