@@ -8,21 +8,22 @@ Selamat datang di latihan JavaScript interaktif! Folder ini berisi latihan haria
 
 ### 1. Pilih Latihan
 Setiap hari memiliki file latihan tersendiri di folder `exercises/`:
-- `exercises/day-2/variables.js` - Variabel
-- `exercises/day-3/datatypes.js` - Tipe Data
-- `exercises/day-4/operators.js` - Operator
+- `exercises/day-1/` - Pengenalan JavaScript
 - `exercises/day-5/logical-operators.js` - Operator Logika
 - `exercises/day-6/string-methods.js` - String Methods
 - `exercises/day-7/biodata-generator.js` - Mini Project: Biodata Generator
-<<<<<<<< HEAD:exercises/README-exercises.md
 - `exercises/day-8/if-else.js` - If/Else Statement
 - `exercises/day-9/switch-case.js` - Switch Case
-<<<<<<< HEAD:README-exercises.md
 - `exercises/day-10/for-loop.js` - For Loop
-=======
->>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
-========
->>>>>>>> 097f5e4ecb1b8dd95f340632e47c9cfabfb9fe6f:README-exercises.md
+- `exercises/day-11/while-loop.js` - While Loop
+- `exercises/day-12/functions-basic.js` - Functions Dasar
+- `exercises/day-13/function-params.js` - Function Parameters & Return
+- `exercises/day-14/fizzbuzz.js` - Mini Project: FizzBuzz
+- `exercises/day-15/array-basics.js` - Array Basics
+- `exercises/day-16/array-methods-1.js` - Array Methods I
+- `exercises/day-17/array-iteration.js` - Array Iteration
+- `exercises/day-18/array-methods-2.js` - Array Methods II
+- `exercises/day-19/object-basics.js` - Object Basics
 
 ### 2. Kerjakan Latihan
 Buka file latihan yang ingin dikerjakan:
@@ -71,36 +72,12 @@ Contoh output:
 ```
 belajarJS/
 ├── exercises/           # Folder berisi file latihan
-│   ├── day-2/
-│   │   └── variables.js
-│   ├── day-3/
-│   │   └── datatypes.js
-│   ├── day-4/
-│   │   └── operators.js
-│   ├── day-5/
-│   │   └── logical-operators.js
-│   ├── day-6/
-│   │   └── string-methods.js
-│   └── day-7/
-│       └── biodata-generator.js
-<<<<<<< HEAD:README-exercises.md
-=======
-<<<<<<<< HEAD:exercises/README-exercises.md
->>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
-│   ├── day-8/
-│   │   └── if-else.js
-│   └── day-9/
-│       └── switch-case.js
-<<<<<<< HEAD:README-exercises.md
-│   └── day-10/
-│       └── for-loop.js
-=======
-========
->>>>>>>> 097f5e4ecb1b8dd95f340632e47c9cfabfb9fe6f:README-exercises.md
->>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
-├── checker.js          # Program untuk mengecek jawaban
-├── roadmap-30-hari-javascript.md  # Panduan belajar
-└── README.md           # File ini
+│   ├── day-1/ ... day-19/
+│   ├── docs/            # Dokumentasi
+│   ├── checker.js       # Program untuk mengecek jawaban
+│   └── test.js          # Test runner
+├── solutions/           # File solusi (lokal)
+└── README.md            # File utama
 ```
 
 ## 💡 Tips
@@ -119,17 +96,20 @@ belajarJS/
 - **Day 5**: Operator logika (AND, OR, NOT)
 - **Day 6**: String methods dan manipulasi
 - **Day 7**: Mini Project - Biodata Generator
-<<<<<<< HEAD:README-exercises.md
 - **Day 8**: If/Else Statement
 - **Day 9**: Switch Case
 - **Day 10**: For Loop
-=======
-<<<<<<<< HEAD:exercises/README-exercises.md
-- **Day 8**: If/Else Statement
-- **Day 9**: Switch Case
-========
->>>>>>>> 097f5e4ecb1b8dd95f340632e47c9cfabfb9fe6f:README-exercises.md
->>>>>>> 86e3722ee2ee7875bb3d8094fa740c3c58ced018:exercises/README-exercises.md
+- **Day 11**: While Loop
+- **Day 12**: Functions Dasar
+- **Day 13**: Function Parameters & Return
+- **Day 14**: Mini Project - FizzBuzz
+- **Day 15**: Array Basics
+- **Day 16**: Array Methods I
+- **Day 17**: Array Iteration
+- **Day 18**: Array Methods II
+- **Day 19**: Object Basics
+- **Day 20-21**: Object Methods & Mini Project
+- **Day 22-30**: DOM & Async
 
 ## ❓ Bantuan
 

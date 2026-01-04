@@ -2137,6 +2137,142 @@ function checkDay15(code) {
     return results;
 }
 
+// Function to check Day 20: Object Methods
+function checkDay20(code) {
+    const results = {
+        passed: [],
+        failed: [],
+        total: 0
+    };
+
+    // === BAGIAN 1: Method dalam Object ===
+    // Check 1.1: Object orang dengan method perkenalan
+    results.total++;
+    if (code.includes('let orang') && code.includes('perkenalan') && code.includes('this.nama') && code.includes('this.umur')) {
+        results.passed.push('✓ 1.1 Object orang dengan method perkenalan menggunakan this');
+    } else {
+        results.failed.push('✗ 1.1 Belum membuat object orang dengan method perkenalan');
+    }
+
+    // Check 1.2: Object kalkulator dengan methods
+    results.total++;
+    if (code.includes('let kalkulator') && code.includes('tambah()') && code.includes('kurang()') && code.includes('kali()') && code.includes('bagi()')) {
+        results.passed.push('✓ 1.2 Object kalkulator dengan 4 methods operasi');
+    } else {
+        results.failed.push('✗ 1.2 Belum membuat object kalkulator lengkap');
+    }
+
+    // Check 1.3: Object counter
+    results.total++;
+    if (code.includes('let counter') && code.includes('this.nilai') && code.includes('getNilai()') && code.includes('reset()')) {
+        results.passed.push('✓ 1.3 Object counter dengan methods increment/decrement');
+    } else {
+        results.failed.push('✗ 1.3 Belum membuat object counter');
+    }
+
+    // === BAGIAN 2: Keyword this ===
+    // Check 2.1: Object mahasiswa dengan info dan status
+    results.total++;
+    if (code.includes('let mahasiswa') && code.includes('info()') && code.includes('status()') && code.includes('this.ipk')) {
+        results.passed.push('✓ 2.1 Object mahasiswa dengan method info dan status');
+    } else {
+        results.failed.push('✗ 2.1 Belum membuat methods info/status di mahasiswa');
+    }
+
+    // Check 2.2: Object bankAccount
+    results.total++;
+    if (code.includes('let bankAccount') && code.includes('deposit') && code.includes('withdraw') && code.includes('this.balance')) {
+        results.passed.push('✓ 2.2 Object bankAccount dengan deposit/withdraw');
+    } else {
+        results.failed.push('✗ 2.2 Belum membuat object bankAccount');
+    }
+
+    // Check 2.3: Object game
+    results.total++;
+    if (code.includes('let game') && code.includes('takeDamage') && code.includes('heal') && code.includes('this.health')) {
+        results.passed.push('✓ 2.3 Object game dengan health system');
+    } else {
+        results.failed.push('✗ 2.3 Belum membuat object game');
+    }
+
+    // === BAGIAN 3: Nested Objects ===
+    // Check 3.1: Object perusahaan dengan nested
+    results.total++;
+    if (code.includes('let perusahaan') && code.includes('alamat:') && code.includes('kontak:') && code.includes('this.alamat.')) {
+        results.passed.push('✓ 3.1 Object perusahaan dengan nested objects');
+    } else {
+        results.failed.push('✗ 3.1 Belum membuat object perusahaan dengan nested');
+    }
+
+    // Check 3.2: Object user dengan profile dan settings
+    results.total++;
+    if (code.includes('let user') && code.includes('profile:') && code.includes('settings:') && code.includes('updateProfile')) {
+        results.passed.push('✓ 3.2 Object user dengan profile/settings');
+    } else {
+        results.failed.push('✗ 3.2 Belum membuat object user');
+    }
+
+    // Check 3.3: Object toko dengan methods
+    results.total++;
+    if (code.includes('let toko') && code.includes('getProduk') && code.includes('tambahStok') && code.includes('getTotalNilai')) {
+        results.passed.push('✓ 3.3 Object toko dengan inventory methods');
+    } else {
+        results.failed.push('✗ 3.3 Belum membuat methods di object toko');
+    }
+
+    // === BAGIAN 4: Method Chaining ===
+    // Check 4.1: Object stringBuilder
+    results.total++;
+    if (code.includes('let stringBuilder') && code.includes('return this') && code.includes('append') && code.includes('build()')) {
+        results.passed.push('✓ 4.1 Object stringBuilder dengan method chaining');
+    } else {
+        results.failed.push('✗ 4.1 Belum membuat stringBuilder dengan chaining');
+    }
+
+    // Check 4.2: Object queryBuilder
+    results.total++;
+    if (code.includes('let queryBuilder') && code.includes('select') && code.includes('from') && code.includes('where')) {
+        results.passed.push('✓ 4.2 Object queryBuilder');
+    } else {
+        results.failed.push('✗ 4.2 Belum membuat queryBuilder');
+    }
+
+    // === BAGIAN 5: Challenge ===
+    // Check 5.1: Object todoApp
+    results.total++;
+    if (code.includes('let todoApp') && code.includes('add(') && code.includes('complete(') && code.includes('getAll')) {
+        results.passed.push('✓ 5.1 Object todoApp dengan CRUD methods');
+    } else {
+        results.failed.push('✗ 5.1 Belum membuat todoApp');
+    }
+
+    // Check todoApp methods lengkap
+    results.total++;
+    if (code.includes('getActive') && code.includes('getCompleted') && code.includes('stats')) {
+        results.passed.push('✓ 5.1b TodoApp methods lengkap (getActive, getCompleted, stats)');
+    } else {
+        results.failed.push('✗ 5.1b TodoApp methods belum lengkap');
+    }
+
+    // Check 5.2: Object inventory
+    results.total++;
+    if (code.includes('let inventory') && code.includes('addItem') && code.includes('getByCategory')) {
+        results.passed.push('✓ 5.2 Object inventory dengan category methods');
+    } else {
+        results.failed.push('✗ 5.2 Belum membuat object inventory');
+    }
+
+    // Check inventory methods lengkap
+    results.total++;
+    if (code.includes('getLowStock') && code.includes('getTotalValue') && code.includes('getReport')) {
+        results.passed.push('✓ 5.2b Inventory methods lengkap');
+    } else {
+        results.failed.push('✗ 5.2b Inventory methods belum lengkap');
+    }
+
+    return results;
+}
+
 // Main checker function
 function checkExercise(filePath, day) {
     try {
@@ -2203,6 +2339,9 @@ function checkExercise(filePath, day) {
                 break;
             case 19:
                 results = checkDay19(code);
+                break;
+            case 20:
+                results = checkDay20(code);
                 break;
             default:
                 console.log('Day not supported yet');
