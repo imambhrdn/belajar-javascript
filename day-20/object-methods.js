@@ -152,6 +152,23 @@ let game = {
     score: 0,
     level: 1,
     // Tambahkan methods
+    takeDamage(amount) {
+        this.health -= amount
+    },
+    heal(amount) {
+        this.health = Math.min(this.health + amount, 100)
+    },
+    addScore(points) {
+        this.score += points
+    },
+    levelUp() {
+        if (this.score >= 100 * 100) {
+            this.level += 1
+        }
+    },
+    getStatus() {
+        return this.level + this
+    }
 };
 
 // ============================================
@@ -167,9 +184,18 @@ let game = {
 // - method: getKontak() return semua info kontak
 let perusahaan = {
     // Tulis kode di sini
+    nama: 'Tech Corp',
+    alamat: { jalan: 'Jl. Sudirman No. 1', kota: 'Jakarta', kodePos: '12345' },
+    kontak: { telepon: '021-12345678', email: 'info@techcorp.com', website: 'www.techcorp.com' },
+    getAlamatLengkap() {
+        return `${this.alamat.jalan}, ${this.alamat.kota}, ${this.alamat.kodePos}`;
+    },
+    getKontak() {
+        return `${this.kontak.telepon}, ${this.kontak.email}, ${this.kontak.website}`;
+    }
 };
-// console.log(perusahaan.getAlamatLengkap());
-// console.log(perusahaan.getKontak());
+console.log(perusahaan.getAlamatLengkap());
+console.log(perusahaan.getKontak());
 
 // TODO 3.2: Buat object 'user' dengan struktur:
 // - profile: { nama, email, umur }
@@ -179,10 +205,22 @@ let perusahaan = {
 // - method: setLanguage(lang) ubah language
 let user = {
     // Tulis kode di sini
+    profile: { nama: 'Imam', email: 'imam@email.com', umur: 23 },
+    settings: { darkmode: true, notification: true, language: '' },
+    updateProfile(key, value) {
+        this.profile[key] = value;
+    },
+    toggleDarkMode() {
+        this.settings.darkMode = !this.settings.darkMode;
+    },
+    setLanguage(lang) {
+        this.settings.language = lang;
+    }
+
 };
-// user.updateProfile("nama", "John Doe");
-// user.toggleDarkMode();
-// user.setLanguage("id");
+user.updateProfile("nama", "John Doe");
+user.toggleDarkMode();
+user.setLanguage("id");
 
 // TODO 3.3: Buat object 'toko' dengan:
 // - nama: "Toko Elektronik"
@@ -199,11 +237,33 @@ let toko = {
         { id: 3, nama: "Keyboard", harga: 300000, stok: 15 }
     ],
     // Tambahkan methods
+    getProduk(id) {
+        return this.produk.find(p => p.id === id)
+    },
+    tambahStok(id, jumlah) {
+        const produk = this.getProduk(id)
+        if (produk) {
+            produk.stok += jumlah;
+        }
+    },
+
+    kurangiStok(id, jumlah) {
+        const produk = this.getProduk(id)
+        if (produk && produk.stok >= jumlah) {
+            produk.stok -= jumlah;
+            return true;
+        }
+        return false
+    },
+
+    getTotalNilai() {
+        return this.produk.reduce((total, p) => total + (p.harga * p.stok), 0);
+    }
 };
-// console.log(toko.getProduk(1)); // { id: 1, nama: "Laptop", ... }
-// toko.tambahStok(1, 3);
-// console.log(toko.getProduk(1).stok); // 8
-// console.log(toko.getTotalNilai());
+console.log(toko.getProduk(1)); // { id: 1, nama: "Laptop", ... }
+toko.tambahStok(1, 3);
+console.log(toko.getProduk(1).stok); // 8
+console.log(toko.getTotalNilai());
 
 // ============================================
 // BAGIAN 4: Method Chaining
@@ -218,16 +278,39 @@ let toko = {
 // - method: clear() reset result, return this
 // - method: build() return hasil akhir
 let stringBuilder = {
-    // Tulis kode di sini
+    result: '',
+
+    append(str) {
+        this.result += str;
+        return this;
+    },
+
+    space() {
+        this.result += ' ';
+        return this;
+    },
+
+    newLine() {
+        this.result += '\n';
+        return this;
+    },
+
+    clear() {
+        this.result = '';
+        return this;
+    },
+    build() {
+        return this.result;
+    }
 };
-// let hasil = stringBuilder
-//     .append("Hello")
-//     .space()
-//     .append("World")
-//     .newLine()
-//     .append("How are you?")
-//     .build();
-// console.log(hasil);
+let hasil = stringBuilder
+    .append("Hello")
+    .space()
+    .append("World")
+    .newLine()
+    .append("How are you?")
+    .build();
+console.log(hasil);
 
 // TODO 4.2: Buat object 'queryBuilder' dengan:
 // - property: table = "", conditions = [], fields = "*"
